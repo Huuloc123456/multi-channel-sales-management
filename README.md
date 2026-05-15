@@ -100,32 +100,51 @@ omnichannel-sales-management/
 │
 ├── ui/                              # 🖥️ Tầng Giao diện (Presentation Layer)
 │   ├── __init__.py
-│   └── main_window.py               #   → MainWindow Tkinter (Thành viên 2)
+│   ├── login_window.py              #   → Màn hình Đăng nhập
+│   ├── main_window.py               #   → Giao diện điều hướng chính (MainWindow)
+│   ├── dashboard_frame.py           #   → Tổng quan hệ thống (Dashboard)
+│   ├── product_frame.py             #   → Quản lý Sản phẩm / Kho hàng
+│   ├── order_frame.py               #   → Quản lý Đơn hàng chung
+│   ├── order_workflow.py            #   → Luồng xử lý Đơn hàng
+│   ├── customer_frame.py            #   → Quản lý Khách hàng
+│   ├── multichannel_frame.py        #   → Quản lý Đa kênh (Shopee, TikTok, FB...)
+│   ├── report_frame.py              #   → Báo cáo / Doanh thu
+│   ├── file_frame.py                #   → Import/Export File
+│   ├── user_frame.py                #   → Quản lý Người dùng & Phân quyền
+│   ├── charts.py                    #   → Vẽ biểu đồ (Matplotlib)
+│   ├── widgets.py                   #   → Các component UI dùng chung (Table, Button...)
+│   └── theme.py                     #   → Cấu hình màu sắc, font chữ
 │
 ├── utils/                           # 🔧 Tiện ích dùng chung
 │   ├── __init__.py
 │   ├── helpers.py                   #   → generate_id, format_currency, timestamp
 │   └── validators.py                #   → validate_email, validate_phone, validate_price
 │
-├── tests/                           # ✅ Unit Tests
+├── tests/                           # ✅ Unit Tests (Pytest)
 │   ├── __init__.py
-│   ├── test_models.py               #   → Tests cho Product, Customer, Order
-│   └── test_file_handlers.py        #   → Tests cho Handlers + Factory
+│   ├── test_models.py               #   → Tests cho Data Models
+│   ├── test_managers.py             #   → Tests cho Business Logic
+│   ├── test_file_handlers.py        #   → Tests cho File I/O
+│   ├── test_utils.py                #   → Tests cho Validators & Helpers
+│   └── test_ui.py                   #   → Tests cho Giao diện
 │
-├── data/                            # 📂 Thư mục lưu file dữ liệu (tự tạo khi chạy)
+├── data/                            # 📂 Thư mục lưu file dữ liệu (JSON)
 │   ├── products.json
 │   ├── customers.json
-│   └── orders.json
+│   ├── orders.json
+│   └── users.json                   #   → Tài khoản đăng nhập hệ thống
 │
 ├── logs/                            # 📝 Log file ứng dụng (tự tạo khi chạy)
 │   └── app.log
 │
-├── exports/                         # 📤 File xuất báo cáo
-├── assets/                          # 🖼️ Tài nguyên (icon, ảnh)
+├── exports/                         # 📤 File xuất báo cáo (CSV, TXT)
+├── assets/                          # 🖼️ Tài nguyên (icon, ảnh giao diện)
 │
 ├── requirements.txt                 # 📦 Danh sách thư viện cần cài
 ├── build.bat                        # 🔨 Script đóng gói (Windows)
 ├── build.sh                         # 🔨 Script đóng gói (Linux/macOS)
+├── .gitignore                       # 🙈 Cấu hình bỏ qua file trên Git
+├── OmnichannelSales.spec            # 🏗️ Cấu hình PyInstaller
 └── README.md                        # 📖 Tài liệu dự án
 ```
 
