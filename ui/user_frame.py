@@ -6,6 +6,7 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
+import re
 
 from ui import theme as T
 from ui.widgets import (
@@ -253,6 +254,9 @@ class UserDialog(ModalDialog):
         if uname in self._existing:
             messagebox.showerror("Lỗi", f"Tài khoản '{uname}' đã tồn tại.", parent=self)
             return
+        if email and not re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", email):
+            messagebox.showerror("Lỗi", "Định dạng email không hợp lệ.", parent=self)
+            return
 
         self.result = {
             "username":   uname,
@@ -260,7 +264,7 @@ class UserDialog(ModalDialog):
             "role":       role,
             "email":      email,
             "is_active":  self._user.get("is_active", True) if self._user else True,
-            "password_hash": self._user.get("password_hash", "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"), # Default: admin
+            "password_hash": self._user.get("password_hash", "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918") if self._user else "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
             "created_at": self._user.get("created_at", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
                           if self._user else datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         }
