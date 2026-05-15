@@ -1,14 +1,4 @@
-"""
-models/product.py
-=================
-Mô hình đối tượng Product (Sản phẩm).
-
-Nguyên lý OOP áp dụng:
-- Encapsulation (Bao đóng): Tất cả thuộc tính được khai báo là private
-  (tiền tố __) và chỉ được truy cập qua getter/setter.
-- Abstraction (Trừu tượng hóa): Ẩn đi chi tiết triển khai bên trong,
-  chỉ công khai giao diện cần thiết.
-"""
+""" models/product.py  Mô hình đối tượng Product (Sản phẩm). Nguyên lý OOP áp dụng: - Encapsulation (Bao đóng): Tất cả thuộc tính được khai báo là private (tiền tố __) và chỉ được truy cập qua getter/setter. - Abstraction (Trừu tượng hóa): Ẩn đi chi tiết triển khai bên trong, chỉ công khai giao diện cần thiết. """
 
 from datetime import datetime
 from utils.helpers import generate_id, get_timestamp
@@ -16,19 +6,7 @@ from utils.validators import validate_price
 
 
 class Product:
-    """
-    Đại diện cho một sản phẩm trong hệ thống bán hàng.
-
-    Attributes (private):
-        __product_id (str): Mã định danh duy nhất của sản phẩm.
-        __name (str): Tên sản phẩm.
-        __price (float): Giá bán sản phẩm (VND).
-        __quantity (int): Số lượng tồn kho.
-        __category (str): Danh mục sản phẩm.
-        __channel (str): Kênh bán hàng (online/offline/both).
-        __created_at (str): Thời điểm tạo bản ghi.
-        __updated_at (str): Thời điểm cập nhật gần nhất.
-    """
+    """ Đại diện cho một sản phẩm trong hệ thống bán hàng. Attributes (private): __product_id (str): Mã định danh duy nhất của sản phẩm. __name (str): Tên sản phẩm. __price (float): Giá bán sản phẩm (VND). __quantity (int): Số lượng tồn kho. __category (str): Danh mục sản phẩm. __channel (str): Kênh bán hàng (online/offline/both). __created_at (str): Thời điểm tạo bản ghi. __updated_at (str): Thời điểm cập nhật gần nhất. """
 
     VALID_CHANNELS = ("online", "offline", "both")
 
@@ -135,15 +113,7 @@ class Product:
     # ------------------------------------------------------------------ #
 
     def update_stock(self, delta: int):
-        """
-        Cộng/trừ số lượng tồn kho.
-
-        Args:
-            delta (int): Giá trị thay đổi (dương: nhập hàng, âm: bán hàng).
-
-        Raises:
-            ValueError: Nếu số lượng sau khi thay đổi < 0.
-        """
+        """ Cộng/trừ số lượng tồn kho. Args: delta (int): Giá trị thay đổi (dương: nhập hàng, âm: bán hàng). Raises: ValueError: Nếu số lượng sau khi thay đổi < 0. """
         new_qty = self.__quantity + delta
         if new_qty < 0:
             raise ValueError(
@@ -153,7 +123,7 @@ class Product:
         self.__updated_at = get_timestamp()
 
     def to_dict(self) -> dict:
-        """Chuyển đổi object thành dictionary để lưu file."""
+        """ Chuyển đổi object thành dictionary để lưu file. """
         return {
             "product_id": self.__product_id,
             "name": self.__name,
@@ -167,7 +137,7 @@ class Product:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Product":
-        """Tạo object Product từ dictionary (đọc từ file)."""
+        """ Tạo object Product từ dictionary (đọc từ file). """
         return cls(
             name=data["name"],
             price=float(data["price"]),

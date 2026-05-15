@@ -1,8 +1,4 @@
-"""
-data_processing/product_manager.py
-====================================
-Manager xử lý nghiệp vụ liên quan đến Sản phẩm.
-"""
+""" data_processing/product_manager.py  Manager xử lý nghiệp vụ liên quan đến Sản phẩm. """
 
 import logging
 from typing import Optional
@@ -16,13 +12,7 @@ DEFAULT_PRODUCT_FILE = "data/products.json"
 
 
 class ProductManager(BaseManager):
-    """
-    Quản lý CRUD cho entity Product.
-
-    Kế thừa từ BaseManager và triển khai:
-        - _from_dict()      → Product.from_dict()
-        - _get_entity_id()  → product.product_id
-    """
+    """ Quản lý CRUD cho entity Product. Kế thừa từ BaseManager và triển khai: - _from_dict() → Product.from_dict() - _get_entity_id() → product.product_id """
 
     def __init__(self, data_file: str = DEFAULT_PRODUCT_FILE):
         super().__init__(data_file)
@@ -42,28 +32,19 @@ class ProductManager(BaseManager):
     # ------------------------------------------------------------------ #
 
     def get_by_category(self, category: str) -> list[Product]:
-        """Lọc sản phẩm theo danh mục."""
+        """ Lọc sản phẩm theo danh mục. """
         return self.search(category=category)
 
     def get_by_channel(self, channel: str) -> list[Product]:
-        """Lọc sản phẩm theo kênh bán hàng."""
+        """ Lọc sản phẩm theo kênh bán hàng. """
         return self.search(channel=channel)
 
     def get_low_stock(self, threshold: int = 5) -> list[Product]:
-        """Lấy danh sách sản phẩm sắp hết hàng (tồn kho <= threshold)."""
+        """ Lấy danh sách sản phẩm sắp hết hàng (tồn kho <= threshold). """
         return [p for p in self.get_all() if p.quantity <= threshold]
 
     def update_stock(self, product_id: str, delta: int) -> bool:
-        """
-        Điều chỉnh tồn kho theo delta.
-
-        Args:
-            product_id (str): Mã sản phẩm.
-            delta (int): Thay đổi số lượng (dương: nhập, âm: bán).
-
-        Returns:
-            bool: True nếu thành công.
-        """
+        """ Điều chỉnh tồn kho theo delta. Args: product_id (str): Mã sản phẩm. delta (int): Thay đổi số lượng (dương: nhập, âm: bán). Returns: bool: True nếu thành công. """
         product = self.get_by_id(product_id)
         if not product:
             logger.warning("Không tìm thấy sản phẩm: %s", product_id)
@@ -76,12 +57,7 @@ class ProductManager(BaseManager):
             return False
 
     def get_statistics(self) -> dict:
-        """
-        Thống kê tổng quan danh mục sản phẩm.
-
-        Returns:
-            dict: Tổng số SP, tổng giá trị tồn kho, số SP hết hàng.
-        """
+        """ Thống kê tổng quan danh mục sản phẩm. Returns: dict: Tổng số SP, tổng giá trị tồn kho, số SP hết hàng. """
         products = self.get_all()
         total_value = sum(p.price * p.quantity for p in products)
         out_of_stock = sum(1 for p in products if p.quantity == 0)

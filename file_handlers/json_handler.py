@@ -1,13 +1,4 @@
-"""
-file_handlers/json_handler.py
-==============================
-Triển khai cụ thể của BaseFileHandler cho định dạng JSON.
-
-Nguyên lý OOP áp dụng:
-- Inheritance (Kế thừa): JsonHandler kế thừa BaseFileHandler.
-- Override (Ghi đè): Triển khai cụ thể read() và write() cho JSON.
-- Exception Handling: Xử lý đầy đủ các trường hợp lỗi.
-"""
+""" file_handlers/json_handler.py  Triển khai cụ thể của BaseFileHandler cho định dạng JSON. Nguyên lý OOP áp dụng: - Inheritance (Kế thừa): JsonHandler kế thừa BaseFileHandler. - Override (Ghi đè): Triển khai cụ thể read() và write() cho JSON. - Exception Handling: Xử lý đầy đủ các trường hợp lỗi. """
 
 import json
 import logging
@@ -19,20 +10,10 @@ logger = logging.getLogger(__name__)
 
 
 class JsonHandler(BaseFileHandler):
-    """
-    Handler để đọc/ghi dữ liệu dạng JSON.
-
-    Kế thừa từ BaseFileHandler và ghi đè read() + write().
-    Hỗ trợ đọc/ghi list và dict với encoding UTF-8.
-    """
+    """ Handler để đọc/ghi dữ liệu dạng JSON. Kế thừa từ BaseFileHandler và ghi đè read() + write(). Hỗ trợ đọc/ghi list và dict với encoding UTF-8. """
 
     def __init__(self, file_path: str, indent: int = 4, encoding: str = "utf-8"):
-        """
-        Args:
-            file_path (str): Đường dẫn tới file .json.
-            indent (int): Số khoảng trắng thụt đầu dòng khi ghi (mặc định 4).
-            encoding (str): Encoding khi đọc/ghi (mặc định utf-8).
-        """
+        """ Args: file_path (str): Đường dẫn tới file .json. indent (int): Số khoảng trắng thụt đầu dòng khi ghi (mặc định 4). encoding (str): Encoding khi đọc/ghi (mặc định utf-8). """
         super().__init__(file_path)
         self.__indent = indent
         self.__encoding = encoding
@@ -42,18 +23,7 @@ class JsonHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def read(self) -> Any:
-        """
-        Đọc và parse nội dung file JSON.
-
-        Returns:
-            Any: list hoặc dict được parse từ JSON. Trả về list rỗng
-                 nếu file rỗng.
-
-        Raises:
-            FileNotFoundError: Nếu file không tồn tại.
-            ValueError: Nếu nội dung không phải JSON hợp lệ.
-            IOError: Nếu có lỗi hệ thống khi đọc file.
-        """
+        """ Đọc và parse nội dung file JSON. Returns: Any: list hoặc dict được parse từ JSON. Trả về list rỗng nếu file rỗng. Raises: FileNotFoundError: Nếu file không tồn tại. ValueError: Nếu nội dung không phải JSON hợp lệ. IOError: Nếu có lỗi hệ thống khi đọc file. """
         if not self.exists():
             logger.warning("File không tồn tại: %s", self._file_path)
             raise FileNotFoundError(f"Không tìm thấy file: {self._file_path}")
@@ -82,19 +52,7 @@ class JsonHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def write(self, data: Any) -> bool:
-        """
-        Ghi dữ liệu ra file JSON với định dạng đẹp (pretty-print).
-
-        Args:
-            data (Any): list hoặc dict cần ghi.
-
-        Returns:
-            bool: True nếu ghi thành công.
-
-        Raises:
-            TypeError: Nếu data không thể serialize sang JSON.
-            IOError: Nếu có lỗi hệ thống khi ghi file.
-        """
+        """ Ghi dữ liệu ra file JSON với định dạng đẹp (pretty-print). Args: data (Any): list hoặc dict cần ghi. Returns: bool: True nếu ghi thành công. Raises: TypeError: Nếu data không thể serialize sang JSON. IOError: Nếu có lỗi hệ thống khi ghi file. """
         self.ensure_directory()
 
         try:
@@ -119,17 +77,7 @@ class JsonHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def append(self, record: dict) -> bool:
-        """
-        Thêm một bản ghi vào cuối danh sách JSON.
-
-        Tiện lợi hơn read() → append → write() thủ công.
-
-        Args:
-            record (dict): Bản ghi cần thêm.
-
-        Returns:
-            bool: True nếu thành công.
-        """
+        """ Thêm một bản ghi vào cuối danh sách JSON. Tiện lợi hơn read() → append → write() thủ công. Args: record (dict): Bản ghi cần thêm. Returns: bool: True nếu thành công. """
         try:
             data = self.read() if self.exists() else []
         except (FileNotFoundError, ValueError):

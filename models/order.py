@@ -1,28 +1,11 @@
-"""
-models/order.py
-===============
-Mô hình đối tượng Order (Đơn hàng) và OrderItem (Chi tiết đơn hàng).
-
-Nguyên lý OOP áp dụng:
-- Composition (Hợp thành): Order chứa danh sách các OrderItem.
-- Encapsulation: Tất cả thuộc tính là private, truy cập qua property.
-- Business Logic được đóng gói bên trong class (tính tổng tiền, trạng thái).
-"""
+""" models/order.py  Mô hình đối tượng Order (Đơn hàng) và OrderItem (Chi tiết đơn hàng). Nguyên lý OOP áp dụng: - Composition (Hợp thành): Order chứa danh sách các OrderItem. - Encapsulation: Tất cả thuộc tính là private, truy cập qua property. - Business Logic được đóng gói bên trong class (tính tổng tiền, trạng thái). """
 
 from utils.helpers import generate_id, get_timestamp
 from utils.validators import validate_price
 
 
 class OrderItem:
-    """
-    Đại diện cho một dòng sản phẩm trong đơn hàng.
-
-    Attributes (private):
-        __product_id (str): Mã sản phẩm tham chiếu.
-        __product_name (str): Tên sản phẩm tại thời điểm đặt hàng.
-        __unit_price (float): Đơn giá tại thời điểm đặt hàng.
-        __quantity (int): Số lượng đặt.
-    """
+    """ Đại diện cho một dòng sản phẩm trong đơn hàng. Attributes (private): __product_id (str): Mã sản phẩm tham chiếu. __product_name (str): Tên sản phẩm tại thời điểm đặt hàng. __unit_price (float): Đơn giá tại thời điểm đặt hàng. __quantity (int): Số lượng đặt. """
 
     def __init__(
         self,
@@ -65,7 +48,7 @@ class OrderItem:
 
     @property
     def subtotal(self) -> float:
-        """Thành tiền = đơn giá × số lượng."""
+        """ Thành tiền = đơn giá × số lượng. """
         return self.__unit_price * self.__quantity
 
     # ------------------------------------------------------------------ #
@@ -98,20 +81,7 @@ class OrderItem:
 
 
 class Order:
-    """
-    Đại diện cho một đơn hàng trong hệ thống.
-
-    Attributes (private):
-        __order_id (str): Mã định danh đơn hàng.
-        __customer_id (str): Mã khách hàng tham chiếu.
-        __items (list[OrderItem]): Danh sách sản phẩm trong đơn.
-        __channel (str): Kênh bán hàng phát sinh đơn.
-        __status (str): Trạng thái đơn hàng.
-        __discount (float): Tỷ lệ giảm giá (0.0 – 1.0).
-        __notes (str): Ghi chú đơn hàng.
-        __created_at (str): Thời điểm tạo đơn.
-        __updated_at (str): Thời điểm cập nhật gần nhất.
-    """
+    """ Đại diện cho một đơn hàng trong hệ thống. Attributes (private): __order_id (str): Mã định danh đơn hàng. __customer_id (str): Mã khách hàng tham chiếu. __items (list[OrderItem]): Danh sách sản phẩm trong đơn. __channel (str): Kênh bán hàng phát sinh đơn. __status (str): Trạng thái đơn hàng. __discount (float): Tỷ lệ giảm giá (0.0 – 1.0). __notes (str): Ghi chú đơn hàng. __created_at (str): Thời điểm tạo đơn. __updated_at (str): Thời điểm cập nhật gần nhất. """
 
     VALID_STATUSES = ("pending", "confirmed", "shipping", "completed", "cancelled")
     VALID_CHANNELS = ("online", "offline", "facebook", "shopee", "tiktok")
@@ -165,7 +135,7 @@ class Order:
 
     @property
     def items(self) -> list:
-        """Trả về bản sao để tránh chỉnh sửa trực tiếp từ bên ngoài."""
+        """ Trả về bản sao để tránh chỉnh sửa trực tiếp từ bên ngoài. """
         return list(self.__items)
 
     @property
@@ -194,17 +164,17 @@ class Order:
 
     @property
     def subtotal(self) -> float:
-        """Tổng tiền trước giảm giá."""
+        """ Tổng tiền trước giảm giá. """
         return sum(item.subtotal for item in self.__items)
 
     @property
     def total_amount(self) -> float:
-        """Tổng tiền sau giảm giá."""
+        """ Tổng tiền sau giảm giá. """
         return self.subtotal * (1 - self.__discount)
 
     @property
     def item_count(self) -> int:
-        """Tổng số lượng sản phẩm."""
+        """ Tổng số lượng sản phẩm. """
         return sum(item.quantity for item in self.__items)
 
     # ------------------------------------------------------------------ #
@@ -250,10 +220,7 @@ class Order:
     # ------------------------------------------------------------------ #
 
     def add_item(self, item: OrderItem):
-        """
-        Thêm một OrderItem vào đơn hàng.
-        Nếu sản phẩm đã tồn tại, cộng thêm số lượng.
-        """
+        """ Thêm một OrderItem vào đơn hàng. Nếu sản phẩm đã tồn tại, cộng thêm số lượng. """
         if self.__status in ("completed", "cancelled"):
             raise RuntimeError(
                 f"Không thể sửa đơn hàng ở trạng thái: {self.__status!r}"
@@ -275,7 +242,7 @@ class Order:
         self.__updated_at = get_timestamp()
 
     def remove_item(self, product_id: str):
-        """Xóa sản phẩm khỏi đơn hàng theo mã sản phẩm."""
+        """ Xóa sản phẩm khỏi đơn hàng theo mã sản phẩm. """
         self.__items = [i for i in self.__items if i.product_id != product_id]
         self.__updated_at = get_timestamp()
 
@@ -284,7 +251,7 @@ class Order:
     # ------------------------------------------------------------------ #
 
     def to_dict(self) -> dict:
-        """Chuyển đổi object thành dictionary để lưu file."""
+        """ Chuyển đổi object thành dictionary để lưu file. """
         return {
             "order_id": self.__order_id,
             "customer_id": self.__customer_id,
@@ -302,7 +269,7 @@ class Order:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Order":
-        """Tạo object Order từ dictionary (đọc từ file)."""
+        """ Tạo object Order từ dictionary (đọc từ file). """
         return cls(
             customer_id=data["customer_id"],
             channel=data.get("channel", "offline"),

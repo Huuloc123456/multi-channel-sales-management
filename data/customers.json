@@ -1,0 +1,1002 @@
+[
+    {
+        "customer_id": "CUS-986D354A",
+        "full_name": "Khách hàng 0",
+        "email": "khachhang0@email.com",
+        "phone": "0961815137",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 180,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-11B69318",
+        "full_name": "Khách hàng 1",
+        "email": "khachhang1@email.com",
+        "phone": "0983839628",
+        "address": "Quận 12, TP HCM",
+        "loyalty_points": 248,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-9B019D99",
+        "full_name": "Khách hàng 2",
+        "email": "khachhang2@email.com",
+        "phone": "0920302918",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 617,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-423FD05F",
+        "full_name": "Khách hàng 3",
+        "email": "khachhang3@email.com",
+        "phone": "0952266263",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 562,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-033BCF74",
+        "full_name": "Khách hàng 4",
+        "email": "khachhang4@email.com",
+        "phone": "0993712513",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 333,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-85E08281",
+        "full_name": "Khách hàng 5",
+        "email": "khachhang5@email.com",
+        "phone": "0957388549",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 597,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-49CED566",
+        "full_name": "Khách hàng 6",
+        "email": "khachhang6@email.com",
+        "phone": "0922606276",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 393,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7E89EB80",
+        "full_name": "Khách hàng 7",
+        "email": "khachhang7@email.com",
+        "phone": "0999359440",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 66,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-32363B6F",
+        "full_name": "Khách hàng 8",
+        "email": "khachhang8@email.com",
+        "phone": "0913088878",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 606,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-1851E393",
+        "full_name": "Khách hàng 9",
+        "email": "khachhang9@email.com",
+        "phone": "0943883998",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 892,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-11E0EB7E",
+        "full_name": "Khách hàng 10",
+        "email": "khachhang10@email.com",
+        "phone": "0934010489",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 812,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-B391C46A",
+        "full_name": "Khách hàng 11",
+        "email": "khachhang11@email.com",
+        "phone": "0992524851",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 957,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-4694ED9D",
+        "full_name": "Khách hàng 12",
+        "email": "khachhang12@email.com",
+        "phone": "0932910547",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 294,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-1B822EF7",
+        "full_name": "Khách hàng 13",
+        "email": "khachhang13@email.com",
+        "phone": "0987053441",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 20,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-53703766",
+        "full_name": "Khách hàng 14",
+        "email": "khachhang14@email.com",
+        "phone": "0911642752",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 478,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-D8AC1993",
+        "full_name": "Khách hàng 15",
+        "email": "khachhang15@email.com",
+        "phone": "0950249377",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 958,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-FAD2FC13",
+        "full_name": "Khách hàng 16",
+        "email": "khachhang16@email.com",
+        "phone": "0915223085",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 723,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-99F95558",
+        "full_name": "Khách hàng 17",
+        "email": "khachhang17@email.com",
+        "phone": "0963990179",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 567,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-5CD294F2",
+        "full_name": "Khách hàng 18",
+        "email": "khachhang18@email.com",
+        "phone": "0986511317",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 355,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-713C7339",
+        "full_name": "Khách hàng 19",
+        "email": "khachhang19@email.com",
+        "phone": "0917853837",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 145,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-9EDE13EF",
+        "full_name": "Khách hàng 20",
+        "email": "khachhang20@email.com",
+        "phone": "0935449422",
+        "address": "Quận 9, TP HCM",
+        "loyalty_points": 436,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-56ECB20E",
+        "full_name": "Khách hàng 21",
+        "email": "khachhang21@email.com",
+        "phone": "0918051610",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 138,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-09D9CF26",
+        "full_name": "Khách hàng 22",
+        "email": "khachhang22@email.com",
+        "phone": "0973966080",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 34,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-9FEA67DB",
+        "full_name": "Khách hàng 23",
+        "email": "khachhang23@email.com",
+        "phone": "0918181682",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 964,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-96E6ADC2",
+        "full_name": "Khách hàng 24",
+        "email": "khachhang24@email.com",
+        "phone": "0910495193",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 191,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-F7BD0ECE",
+        "full_name": "Khách hàng 25",
+        "email": "khachhang25@email.com",
+        "phone": "0920125029",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 666,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7F18C86D",
+        "full_name": "Khách hàng 26",
+        "email": "khachhang26@email.com",
+        "phone": "0930123119",
+        "address": "Quận 9, TP HCM",
+        "loyalty_points": 148,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-E05DF550",
+        "full_name": "Khách hàng 27",
+        "email": "khachhang27@email.com",
+        "phone": "0912906107",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 877,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-98986258",
+        "full_name": "Khách hàng 28",
+        "email": "khachhang28@email.com",
+        "phone": "0931053813",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 136,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-6B7B9AAA",
+        "full_name": "Khách hàng 29",
+        "email": "khachhang29@email.com",
+        "phone": "0930363281",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 823,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-12AF3415",
+        "full_name": "Khách hàng 30",
+        "email": "khachhang30@email.com",
+        "phone": "0915178051",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 287,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-105BFFA0",
+        "full_name": "Khách hàng 31",
+        "email": "khachhang31@email.com",
+        "phone": "0963697197",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 370,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-4AB0C50A",
+        "full_name": "Khách hàng 32",
+        "email": "khachhang32@email.com",
+        "phone": "0998344372",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 722,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-CE47A3B1",
+        "full_name": "Khách hàng 33",
+        "email": "khachhang33@email.com",
+        "phone": "0943170855",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 245,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-BD59355D",
+        "full_name": "Khách hàng 34",
+        "email": "khachhang34@email.com",
+        "phone": "0943444885",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 710,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-84073150",
+        "full_name": "Khách hàng 35",
+        "email": "khachhang35@email.com",
+        "phone": "0951044882",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 570,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3E26BDC4",
+        "full_name": "Khách hàng 36",
+        "email": "khachhang36@email.com",
+        "phone": "0993726366",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 391,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-8B57B738",
+        "full_name": "Khách hàng 37",
+        "email": "khachhang37@email.com",
+        "phone": "0997050643",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 816,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-0A084204",
+        "full_name": "Khách hàng 38",
+        "email": "khachhang38@email.com",
+        "phone": "0977894094",
+        "address": "Quận 12, TP HCM",
+        "loyalty_points": 722,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7208533F",
+        "full_name": "Khách hàng 39",
+        "email": "khachhang39@email.com",
+        "phone": "0944851939",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 664,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-D601ED9F",
+        "full_name": "Khách hàng 40",
+        "email": "khachhang40@email.com",
+        "phone": "0978956366",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 87,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-17543B94",
+        "full_name": "Khách hàng 41",
+        "email": "khachhang41@email.com",
+        "phone": "0932812228",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 6,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-5D572BB7",
+        "full_name": "Khách hàng 42",
+        "email": "khachhang42@email.com",
+        "phone": "0954817550",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 249,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-08D7A3AD",
+        "full_name": "Khách hàng 43",
+        "email": "khachhang43@email.com",
+        "phone": "0953780888",
+        "address": "Quận 12, TP HCM",
+        "loyalty_points": 876,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-FF507FD5",
+        "full_name": "Khách hàng 44",
+        "email": "khachhang44@email.com",
+        "phone": "0928216292",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 811,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-00DC250D",
+        "full_name": "Khách hàng 45",
+        "email": "khachhang45@email.com",
+        "phone": "0987661372",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 385,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-93141FC5",
+        "full_name": "Khách hàng 46",
+        "email": "khachhang46@email.com",
+        "phone": "0983071444",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 238,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-9BA28350",
+        "full_name": "Khách hàng 47",
+        "email": "khachhang47@email.com",
+        "phone": "0983165295",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 794,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-37A15BBA",
+        "full_name": "Khách hàng 48",
+        "email": "khachhang48@email.com",
+        "phone": "0946759052",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 966,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3FC37551",
+        "full_name": "Khách hàng 49",
+        "email": "khachhang49@email.com",
+        "phone": "0983577872",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 507,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-1300215D",
+        "full_name": "Khách hàng 50",
+        "email": "khachhang50@email.com",
+        "phone": "0940492246",
+        "address": "Quận 9, TP HCM",
+        "loyalty_points": 362,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3EF4C41B",
+        "full_name": "Khách hàng 51",
+        "email": "khachhang51@email.com",
+        "phone": "0939633338",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 437,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-1D3B69D5",
+        "full_name": "Khách hàng 52",
+        "email": "khachhang52@email.com",
+        "phone": "0998904811",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 15,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-0299EB8C",
+        "full_name": "Khách hàng 53",
+        "email": "khachhang53@email.com",
+        "phone": "0940273840",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 808,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-D580A406",
+        "full_name": "Khách hàng 54",
+        "email": "khachhang54@email.com",
+        "phone": "0923071444",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 491,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-08488AB6",
+        "full_name": "Khách hàng 55",
+        "email": "khachhang55@email.com",
+        "phone": "0967573061",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 600,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-BD7412AC",
+        "full_name": "Khách hàng 56",
+        "email": "khachhang56@email.com",
+        "phone": "0970671857",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 624,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-C6F4F954",
+        "full_name": "Khách hàng 57",
+        "email": "khachhang57@email.com",
+        "phone": "0927840055",
+        "address": "Quận 12, TP HCM",
+        "loyalty_points": 795,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7A3FCB0A",
+        "full_name": "Khách hàng 58",
+        "email": "khachhang58@email.com",
+        "phone": "0989251210",
+        "address": "Quận 3, TP HCM",
+        "loyalty_points": 171,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-B8FB44D2",
+        "full_name": "Khách hàng 59",
+        "email": "khachhang59@email.com",
+        "phone": "0971191455",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 72,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-80DDE46D",
+        "full_name": "Khách hàng 60",
+        "email": "khachhang60@email.com",
+        "phone": "0959276494",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 609,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-21202839",
+        "full_name": "Khách hàng 61",
+        "email": "khachhang61@email.com",
+        "phone": "0912571185",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 133,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-45C0F78C",
+        "full_name": "Khách hàng 62",
+        "email": "khachhang62@email.com",
+        "phone": "0929503129",
+        "address": "Quận 9, TP HCM",
+        "loyalty_points": 233,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-05B6950C",
+        "full_name": "Khách hàng 63",
+        "email": "khachhang63@email.com",
+        "phone": "0923731611",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 508,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-DE1F7E2B",
+        "full_name": "Khách hàng 64",
+        "email": "khachhang64@email.com",
+        "phone": "0986788540",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 448,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-ACF6D11A",
+        "full_name": "Khách hàng 65",
+        "email": "khachhang65@email.com",
+        "phone": "0995371557",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 996,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-71EF679E",
+        "full_name": "Khách hàng 66",
+        "email": "khachhang66@email.com",
+        "phone": "0946293559",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 433,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-C4763AC7",
+        "full_name": "Khách hàng 67",
+        "email": "khachhang67@email.com",
+        "phone": "0961317494",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 991,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7709D74E",
+        "full_name": "Khách hàng 68",
+        "email": "khachhang68@email.com",
+        "phone": "0932284173",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 283,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-FF500B32",
+        "full_name": "Khách hàng 69",
+        "email": "khachhang69@email.com",
+        "phone": "0944721597",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 253,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-2D06A486",
+        "full_name": "Khách hàng 70",
+        "email": "khachhang70@email.com",
+        "phone": "0999919484",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 182,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-DFB32FE9",
+        "full_name": "Khách hàng 71",
+        "email": "khachhang71@email.com",
+        "phone": "0993062357",
+        "address": "Quận 9, TP HCM",
+        "loyalty_points": 799,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-4ABB8DE2",
+        "full_name": "Khách hàng 72",
+        "email": "khachhang72@email.com",
+        "phone": "0950476804",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 228,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-A20B9012",
+        "full_name": "Khách hàng 73",
+        "email": "khachhang73@email.com",
+        "phone": "0972451622",
+        "address": "Quận 7, TP HCM",
+        "loyalty_points": 589,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-957679A0",
+        "full_name": "Khách hàng 74",
+        "email": "khachhang74@email.com",
+        "phone": "0963852946",
+        "address": "Quận 4, TP HCM",
+        "loyalty_points": 383,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3709FDCC",
+        "full_name": "Khách hàng 75",
+        "email": "khachhang75@email.com",
+        "phone": "0933364727",
+        "address": "Quận 12, TP HCM",
+        "loyalty_points": 916,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-C793A50C",
+        "full_name": "Khách hàng 76",
+        "email": "khachhang76@email.com",
+        "phone": "0993707272",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 683,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-A04C196B",
+        "full_name": "Khách hàng 77",
+        "email": "khachhang77@email.com",
+        "phone": "0971068406",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 358,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-E51BE670",
+        "full_name": "Khách hàng 78",
+        "email": "khachhang78@email.com",
+        "phone": "0959560457",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 671,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-39038FA9",
+        "full_name": "Khách hàng 79",
+        "email": "khachhang79@email.com",
+        "phone": "0967825686",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 437,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-BB1771C2",
+        "full_name": "Khách hàng 80",
+        "email": "khachhang80@email.com",
+        "phone": "0940187727",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 30,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-6A0F52A5",
+        "full_name": "Khách hàng 81",
+        "email": "khachhang81@email.com",
+        "phone": "0930049058",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 591,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-05FAC4EE",
+        "full_name": "Khách hàng 82",
+        "email": "khachhang82@email.com",
+        "phone": "0910170839",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 283,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-0B16C72F",
+        "full_name": "Khách hàng 83",
+        "email": "khachhang83@email.com",
+        "phone": "0915154237",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 391,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-23145577",
+        "full_name": "Khách hàng 84",
+        "email": "khachhang84@email.com",
+        "phone": "0968060775",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 162,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-92629228",
+        "full_name": "Khách hàng 85",
+        "email": "khachhang85@email.com",
+        "phone": "0920653063",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 831,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-49F26C1A",
+        "full_name": "Khách hàng 86",
+        "email": "khachhang86@email.com",
+        "phone": "0947802525",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 973,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3A252B99",
+        "full_name": "Khách hàng 87",
+        "email": "khachhang87@email.com",
+        "phone": "0910801928",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 906,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-7D548517",
+        "full_name": "Khách hàng 88",
+        "email": "khachhang88@email.com",
+        "phone": "0999766753",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 279,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-D2F9BA1C",
+        "full_name": "Khách hàng 89",
+        "email": "khachhang89@email.com",
+        "phone": "0970171591",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 676,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-F015EDC1",
+        "full_name": "Khách hàng 90",
+        "email": "khachhang90@email.com",
+        "phone": "0993050488",
+        "address": "Quận 1, TP HCM",
+        "loyalty_points": 892,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-075A9976",
+        "full_name": "Khách hàng 91",
+        "email": "khachhang91@email.com",
+        "phone": "0972965525",
+        "address": "Quận 11, TP HCM",
+        "loyalty_points": 219,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-C30390F7",
+        "full_name": "Khách hàng 92",
+        "email": "khachhang92@email.com",
+        "phone": "0933241203",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 944,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-29CBD1E8",
+        "full_name": "Khách hàng 93",
+        "email": "khachhang93@email.com",
+        "phone": "0964883394",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 775,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-3A87E138",
+        "full_name": "Khách hàng 94",
+        "email": "khachhang94@email.com",
+        "phone": "0943237731",
+        "address": "Quận 6, TP HCM",
+        "loyalty_points": 792,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-C0B7B8C5",
+        "full_name": "Khách hàng 95",
+        "email": "khachhang95@email.com",
+        "phone": "0944435764",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 853,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-F1E05385",
+        "full_name": "Khách hàng 96",
+        "email": "khachhang96@email.com",
+        "phone": "0953788590",
+        "address": "Quận 2, TP HCM",
+        "loyalty_points": 843,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-DCB2B1CA",
+        "full_name": "Khách hàng 97",
+        "email": "khachhang97@email.com",
+        "phone": "0995904793",
+        "address": "Quận 8, TP HCM",
+        "loyalty_points": 839,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-41BFCB07",
+        "full_name": "Khách hàng 98",
+        "email": "khachhang98@email.com",
+        "phone": "0960515914",
+        "address": "Quận 10, TP HCM",
+        "loyalty_points": 633,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "customer_id": "CUS-88EDDBFA",
+        "full_name": "Khách hàng 99",
+        "email": "khachhang99@email.com",
+        "phone": "0971366353",
+        "address": "Quận 5, TP HCM",
+        "loyalty_points": 423,
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    }
+]

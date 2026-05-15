@@ -1,20 +1,20 @@
-"""
-main.py
-========
-Điểm khởi đầu (entry point) của ứng dụng.
-
-Khởi tạo logging, tạo thư mục dữ liệu nếu chưa có,
-sau đó khởi động giao diện Tkinter.
-"""
+""" main.py  Điểm khởi đầu (entry point) của ứng dụng. Khởi tạo logging, tạo thư mục dữ liệu nếu chưa có, sau đó khởi động giao diện Tkinter. """
 
 import tkinter as tk
 import logging
 import sys
+import io
 from pathlib import Path
 
-# ------------------------------------------------------------------ #
-#  CẤU HÌNH LOGGING                                                   #
-# ------------------------------------------------------------------ #
+# Fix encoding cho Windows console (UTF-8)
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+# --- CẤU HÌNH LOGGING ---
 
 LOG_DIR = Path("logs")
 LOG_DIR.mkdir(exist_ok=True)
@@ -24,33 +24,32 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
     handlers=[
         logging.FileHandler(LOG_DIR / "app.log", encoding="utf-8"),
-        logging.StreamHandler(sys.stdout),
+        logging.StreamHandler(
+            io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+            if hasattr(sys.stdout, "buffer") else sys.stdout
+        ),
     ],
 )
 
 logger = logging.getLogger(__name__)
 
 
-# ------------------------------------------------------------------ #
-#  KHỞI TẠO THƯ MỤC DỮ LIỆU                                          #
-# ------------------------------------------------------------------ #
+# --- KHỞI TẠO THƯ MỤC DỮ LIỆU ---
 
 def ensure_data_directories():
-    """Tạo các thư mục cần thiết nếu chưa tồn tại."""
+    """ Tạo các thư mục cần thiết nếu chưa tồn tại. """
     for directory in ["data", "logs", "exports", "assets"]:
         Path(directory).mkdir(exist_ok=True)
     logger.info("Các thư mục hệ thống đã sẵn sàng.")
 
 
-# ------------------------------------------------------------------ #
-#  MAIN                                                                #
-# ------------------------------------------------------------------ #
+# --- MAIN ---
 
 def main():
-    """Hàm chính khởi động ứng dụng."""
+    """ Hàm chính khởi động ứng dụng. """
     logger.info("=" * 60)
     logger.info("Khởi động Hệ thống Quản lý Bán hàng Đa kênh")
-    logger.info("=" * 60)
+    logger.info("=" * 60)   
 
     ensure_data_directories()
 

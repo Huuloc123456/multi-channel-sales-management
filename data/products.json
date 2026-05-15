@@ -1,0 +1,502 @@
+[
+    {
+        "product_id": "PRD-C5A2F592",
+        "name": "Điện thoại Mẫu 0",
+        "price": 3270000.0,
+        "quantity": 39,
+        "category": "Điện thoại",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-92DF8B56",
+        "name": "Laptop Mẫu 1",
+        "price": 3893000.0,
+        "quantity": 48,
+        "category": "Âm thanh",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-E0A849B6",
+        "name": "Laptop Mẫu 2",
+        "price": 1968000.0,
+        "quantity": 49,
+        "category": "Đồng hồ",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-727D5B7B",
+        "name": "Điện thoại Mẫu 3",
+        "price": 4979000.0,
+        "quantity": 28,
+        "category": "Laptop",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-8C3E4B84",
+        "name": "Điện thoại Mẫu 4",
+        "price": 3432000.0,
+        "quantity": 74,
+        "category": "Âm thanh",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-6C9FC42C",
+        "name": "Phụ kiện Mẫu 5",
+        "price": 1990000.0,
+        "quantity": 91,
+        "category": "Đồng hồ",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-BD4AD065",
+        "name": "Đồng hồ Mẫu 6",
+        "price": 1887000.0,
+        "quantity": 45,
+        "category": "Laptop",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-8F47A92E",
+        "name": "Điện thoại Mẫu 7",
+        "price": 826000.0,
+        "quantity": 75,
+        "category": "Đồng hồ",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-5239D335",
+        "name": "Đồng hồ Mẫu 8",
+        "price": 1144000.0,
+        "quantity": 81,
+        "category": "Phụ kiện",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-B08A7FEC",
+        "name": "Âm thanh Mẫu 9",
+        "price": 1141000.0,
+        "quantity": 67,
+        "category": "Laptop",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-E0DD689B",
+        "name": "Điện thoại Mẫu 10",
+        "price": 551000.0,
+        "quantity": 90,
+        "category": "Điện thoại",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-0AA63320",
+        "name": "Laptop Mẫu 11",
+        "price": 756000.0,
+        "quantity": 63,
+        "category": "Đồng hồ",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-6DD1B3DA",
+        "name": "Âm thanh Mẫu 12",
+        "price": 801000.0,
+        "quantity": 36,
+        "category": "Âm thanh",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-8E1772D7",
+        "name": "Đồng hồ Mẫu 13",
+        "price": 4617000.0,
+        "quantity": 23,
+        "category": "Đồng hồ",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-507A014F",
+        "name": "Laptop Mẫu 14",
+        "price": 4072000.0,
+        "quantity": 61,
+        "category": "Laptop",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-4D437D44",
+        "name": "Phụ kiện Mẫu 15",
+        "price": 3606000.0,
+        "quantity": 54,
+        "category": "Laptop",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-817D8764",
+        "name": "Điện thoại Mẫu 16",
+        "price": 3654000.0,
+        "quantity": 38,
+        "category": "Âm thanh",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-D2E70135",
+        "name": "Đồng hồ Mẫu 17",
+        "price": 491000.0,
+        "quantity": 74,
+        "category": "Laptop",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-498A0D58",
+        "name": "Laptop Mẫu 18",
+        "price": 408000.0,
+        "quantity": 50,
+        "category": "Phụ kiện",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-0573B5BB",
+        "name": "Âm thanh Mẫu 19",
+        "price": 4773000.0,
+        "quantity": 98,
+        "category": "Phụ kiện",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-FFCBB2B9",
+        "name": "Laptop Mẫu 20",
+        "price": 4811000.0,
+        "quantity": 89,
+        "category": "Đồng hồ",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-9F4D77C2",
+        "name": "Laptop Mẫu 21",
+        "price": 4997000.0,
+        "quantity": 89,
+        "category": "Laptop",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-EC9F7F03",
+        "name": "Đồng hồ Mẫu 22",
+        "price": 4354000.0,
+        "quantity": 12,
+        "category": "Điện thoại",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-ECC10FD7",
+        "name": "Đồng hồ Mẫu 23",
+        "price": 625000.0,
+        "quantity": 52,
+        "category": "Laptop",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-ECA369D7",
+        "name": "Điện thoại Mẫu 24",
+        "price": 4780000.0,
+        "quantity": 39,
+        "category": "Điện thoại",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-6060A57E",
+        "name": "Phụ kiện Mẫu 25",
+        "price": 4665000.0,
+        "quantity": 41,
+        "category": "Âm thanh",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-BB69FE26",
+        "name": "Laptop Mẫu 26",
+        "price": 4160000.0,
+        "quantity": 36,
+        "category": "Phụ kiện",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-519016D2",
+        "name": "Phụ kiện Mẫu 27",
+        "price": 3077000.0,
+        "quantity": 56,
+        "category": "Đồng hồ",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-3EF43253",
+        "name": "Điện thoại Mẫu 28",
+        "price": 1815000.0,
+        "quantity": 74,
+        "category": "Phụ kiện",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-D9789139",
+        "name": "Điện thoại Mẫu 29",
+        "price": 2304000.0,
+        "quantity": 26,
+        "category": "Phụ kiện",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-B2743811",
+        "name": "Điện thoại Mẫu 30",
+        "price": 2284000.0,
+        "quantity": 89,
+        "category": "Phụ kiện",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-8FCED6CB",
+        "name": "Phụ kiện Mẫu 31",
+        "price": 4701000.0,
+        "quantity": 77,
+        "category": "Điện thoại",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-D6AD3295",
+        "name": "Điện thoại Mẫu 32",
+        "price": 4892000.0,
+        "quantity": 56,
+        "category": "Laptop",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-C2FA46DD",
+        "name": "Đồng hồ Mẫu 33",
+        "price": 2355000.0,
+        "quantity": 71,
+        "category": "Điện thoại",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-8EE38524",
+        "name": "Điện thoại Mẫu 34",
+        "price": 4231000.0,
+        "quantity": 41,
+        "category": "Điện thoại",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-21D27F16",
+        "name": "Âm thanh Mẫu 35",
+        "price": 1836000.0,
+        "quantity": 69,
+        "category": "Đồng hồ",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-A81D9073",
+        "name": "Đồng hồ Mẫu 36",
+        "price": 4785000.0,
+        "quantity": 82,
+        "category": "Âm thanh",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-2B396E7B",
+        "name": "Laptop Mẫu 37",
+        "price": 3813000.0,
+        "quantity": 50,
+        "category": "Điện thoại",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-F75B41A8",
+        "name": "Âm thanh Mẫu 38",
+        "price": 3991000.0,
+        "quantity": 49,
+        "category": "Điện thoại",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-461C7EBF",
+        "name": "Đồng hồ Mẫu 39",
+        "price": 1007000.0,
+        "quantity": 74,
+        "category": "Đồng hồ",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-410E9E77",
+        "name": "Điện thoại Mẫu 40",
+        "price": 4271000.0,
+        "quantity": 21,
+        "category": "Âm thanh",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-3C480DE0",
+        "name": "Âm thanh Mẫu 41",
+        "price": 858000.0,
+        "quantity": 61,
+        "category": "Đồng hồ",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-97FE0F45",
+        "name": "Điện thoại Mẫu 42",
+        "price": 623000.0,
+        "quantity": 100,
+        "category": "Phụ kiện",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-292EE3FA",
+        "name": "Âm thanh Mẫu 43",
+        "price": 3590000.0,
+        "quantity": 55,
+        "category": "Điện thoại",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-24333B0E",
+        "name": "Đồng hồ Mẫu 44",
+        "price": 2197000.0,
+        "quantity": 70,
+        "category": "Đồng hồ",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-AF1124A3",
+        "name": "Đồng hồ Mẫu 45",
+        "price": 2608000.0,
+        "quantity": 83,
+        "category": "Laptop",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-E80766D6",
+        "name": "Điện thoại Mẫu 46",
+        "price": 4422000.0,
+        "quantity": 25,
+        "category": "Điện thoại",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-D16B0500",
+        "name": "Điện thoại Mẫu 47",
+        "price": 1559000.0,
+        "quantity": 25,
+        "category": "Phụ kiện",
+        "channel": "both",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-6AA38CDC",
+        "name": "Điện thoại Mẫu 48",
+        "price": 4514000.0,
+        "quantity": 24,
+        "category": "Phụ kiện",
+        "channel": "offline",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    },
+    {
+        "product_id": "PRD-DDE42589",
+        "name": "Phụ kiện Mẫu 49",
+        "price": 4051000.0,
+        "quantity": 83,
+        "category": "Đồng hồ",
+        "channel": "online",
+        "created_at": "2026-05-10 10:00:00",
+        "updated_at": "2026-05-10 10:00:00"
+    }
+]

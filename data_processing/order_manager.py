@@ -1,8 +1,4 @@
-"""
-data_processing/order_manager.py
-==================================
-Manager xử lý nghiệp vụ liên quan đến Đơn hàng.
-"""
+""" data_processing/order_manager.py  Manager xử lý nghiệp vụ liên quan đến Đơn hàng. """
 
 import logging
 from typing import Optional
@@ -17,13 +13,7 @@ DEFAULT_ORDER_FILE = "data/orders.json"
 
 
 class OrderManager(BaseManager):
-    """
-    Quản lý CRUD cho entity Order.
-
-    Bổ sung các nghiệp vụ:
-        - Thay đổi trạng thái đơn hàng theo luồng hợp lệ.
-        - Thống kê doanh thu theo kênh, thời gian.
-    """
+    """ Quản lý CRUD cho entity Order. Bổ sung các nghiệp vụ: - Thay đổi trạng thái đơn hàng theo luồng hợp lệ. - Thống kê doanh thu theo kênh, thời gian. """
 
     # Luồng chuyển trạng thái hợp lệ
     _STATUS_TRANSITIONS = {
@@ -52,28 +42,19 @@ class OrderManager(BaseManager):
     # ------------------------------------------------------------------ #
 
     def get_by_customer(self, customer_id: str) -> list[Order]:
-        """Lấy tất cả đơn hàng của một khách hàng."""
+        """ Lấy tất cả đơn hàng của một khách hàng. """
         return self.search(customer_id=customer_id)
 
     def get_by_channel(self, channel: str) -> list[Order]:
-        """Lấy đơn hàng theo kênh bán."""
+        """ Lấy đơn hàng theo kênh bán. """
         return self.search(channel=channel)
 
     def get_by_status(self, status: str) -> list[Order]:
-        """Lấy đơn hàng theo trạng thái."""
+        """ Lấy đơn hàng theo trạng thái. """
         return self.search(status=status)
 
     def change_status(self, order_id: str, new_status: str) -> bool:
-        """
-        Thay đổi trạng thái đơn hàng theo luồng hợp lệ.
-
-        Args:
-            order_id (str): Mã đơn hàng.
-            new_status (str): Trạng thái mới.
-
-        Returns:
-            bool: True nếu chuyển trạng thái thành công.
-        """
+        """ Thay đổi trạng thái đơn hàng theo luồng hợp lệ. Args: order_id (str): Mã đơn hàng. new_status (str): Trạng thái mới. Returns: bool: True nếu chuyển trạng thái thành công. """
         order = self.get_by_id(order_id)
         if not order:
             logger.warning("Không tìm thấy đơn hàng: %s", order_id)
@@ -95,12 +76,7 @@ class OrderManager(BaseManager):
             return False
 
     def get_revenue_by_channel(self) -> dict:
-        """
-        Tổng hợp doanh thu theo kênh bán hàng.
-
-        Returns:
-            dict: {channel: total_revenue}
-        """
+        """ Tổng hợp doanh thu theo kênh bán hàng. Returns: dict: {channel: total_revenue} """
         orders = [o for o in self.get_all() if o.status == "completed"]
         revenue = {}
         for order in orders:
@@ -108,12 +84,7 @@ class OrderManager(BaseManager):
         return revenue
 
     def get_statistics(self) -> dict:
-        """
-        Thống kê tổng quan đơn hàng.
-
-        Returns:
-            dict: Tổng đơn, doanh thu, đơn hủy, đơn hoàn thành.
-        """
+        """ Thống kê tổng quan đơn hàng. Returns: dict: Tổng đơn, doanh thu, đơn hủy, đơn hoàn thành. """
         orders = self.get_all()
         completed = [o for o in orders if o.status == "completed"]
         cancelled = [o for o in orders if o.status == "cancelled"]

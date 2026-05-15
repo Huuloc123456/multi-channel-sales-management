@@ -68,4 +68,3 @@ IF EXIST "dist\OmnichannelSales.exe" (
 
 echo.
 echo Ban co the chay thu: dist\OmnichannelSales.exe
-pause

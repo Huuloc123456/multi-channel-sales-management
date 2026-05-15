@@ -1,31 +1,11 @@
-"""
-models/customer.py
-==================
-Mô hình đối tượng Customer (Khách hàng).
-
-Nguyên lý OOP áp dụng:
-- Encapsulation (Bao đóng): Thuộc tính private, truy cập qua property.
-- Validation trong setter đảm bảo tính toàn vẹn dữ liệu.
-"""
+""" models/customer.py  Mô hình đối tượng Customer (Khách hàng). Nguyên lý OOP áp dụng: - Encapsulation (Bao đóng): Thuộc tính private, truy cập qua property. - Validation trong setter đảm bảo tính toàn vẹn dữ liệu. """
 
 from utils.helpers import generate_id, get_timestamp
 from utils.validators import validate_email, validate_phone
 
 
 class Customer:
-    """
-    Đại diện cho một khách hàng trong hệ thống.
-
-    Attributes (private):
-        __customer_id (str): Mã định danh duy nhất.
-        __full_name (str): Họ và tên khách hàng.
-        __email (str): Địa chỉ email (dùng làm định danh đăng nhập).
-        __phone (str): Số điện thoại liên hệ.
-        __address (str): Địa chỉ giao hàng.
-        __loyalty_points (int): Điểm tích lũy thành viên.
-        __created_at (str): Thời điểm đăng ký.
-        __updated_at (str): Thời điểm cập nhật gần nhất.
-    """
+    """ Đại diện cho một khách hàng trong hệ thống. Attributes (private): __customer_id (str): Mã định danh duy nhất. __full_name (str): Họ và tên khách hàng. __email (str): Địa chỉ email (dùng làm định danh đăng nhập). __phone (str): Số điện thoại liên hệ. __address (str): Địa chỉ giao hàng. __loyalty_points (int): Điểm tích lũy thành viên. __created_at (str): Thời điểm đăng ký. __updated_at (str): Thời điểm cập nhật gần nhất. """
 
     def __init__(
         self,
@@ -127,27 +107,14 @@ class Customer:
     # ------------------------------------------------------------------ #
 
     def add_loyalty_points(self, points: int):
-        """
-        Cộng điểm tích lũy sau mỗi giao dịch mua hàng.
-
-        Args:
-            points (int): Số điểm cộng thêm (phải > 0).
-        """
+        """ Cộng điểm tích lũy sau mỗi giao dịch mua hàng. Args: points (int): Số điểm cộng thêm (phải > 0). """
         if points <= 0:
             raise ValueError("Số điểm cộng phải > 0.")
         self.__loyalty_points += points
         self.__updated_at = get_timestamp()
 
     def redeem_points(self, points: int):
-        """
-        Trừ điểm khi khách hàng đổi ưu đãi.
-
-        Args:
-            points (int): Số điểm cần trừ.
-
-        Raises:
-            ValueError: Nếu điểm hiện tại không đủ.
-        """
+        """ Trừ điểm khi khách hàng đổi ưu đãi. Args: points (int): Số điểm cần trừ. Raises: ValueError: Nếu điểm hiện tại không đủ. """
         if points <= 0:
             raise ValueError("Số điểm đổi phải > 0.")
         if self.__loyalty_points < points:
@@ -158,7 +125,7 @@ class Customer:
         self.__updated_at = get_timestamp()
 
     def to_dict(self) -> dict:
-        """Chuyển đổi object thành dictionary để lưu file."""
+        """ Chuyển đổi object thành dictionary để lưu file. """
         return {
             "customer_id": self.__customer_id,
             "full_name": self.__full_name,
@@ -172,7 +139,7 @@ class Customer:
 
     @classmethod
     def from_dict(cls, data: dict) -> "Customer":
-        """Tạo object Customer từ dictionary (đọc từ file)."""
+        """ Tạo object Customer từ dictionary (đọc từ file). """
         return cls(
             full_name=data["full_name"],
             email=data["email"],

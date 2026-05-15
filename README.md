@@ -222,7 +222,7 @@ class ProductManager(BaseManager):
 ### Bước 1 — Clone dự án
 
 ```bash
-git clone https://github.com/your-username/omnichannel-sales-management.git
+git clone https://github.com/huuloc123456/omnichannel-sales-management.git
 cd omnichannel-sales-management
 ```
 

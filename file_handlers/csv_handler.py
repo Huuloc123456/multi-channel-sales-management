@@ -1,13 +1,4 @@
-"""
-file_handlers/csv_handler.py
-=============================
-Triển khai cụ thể của BaseFileHandler cho định dạng CSV.
-
-Nguyên lý OOP áp dụng:
-- Inheritance (Kế thừa): CsvHandler kế thừa BaseFileHandler.
-- Override (Ghi đè): Triển khai read() và write() cho CSV.
-- Sử dụng csv.DictReader/DictWriter để xử lý header tự động.
-"""
+""" file_handlers/csv_handler.py  Triển khai cụ thể của BaseFileHandler cho định dạng CSV. Nguyên lý OOP áp dụng: - Inheritance (Kế thừa): CsvHandler kế thừa BaseFileHandler. - Override (Ghi đè): Triển khai read() và write() cho CSV. - Sử dụng csv.DictReader/DictWriter để xử lý header tự động. """
 
 import csv
 import logging
@@ -19,12 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 class CsvHandler(BaseFileHandler):
-    """
-    Handler để đọc/ghi dữ liệu dạng CSV.
-
-    Đọc file CSV về dạng list[dict] với header làm key.
-    Ghi list[dict] ra file CSV, tự động lấy fieldnames từ dict đầu tiên.
-    """
+    """ Handler để đọc/ghi dữ liệu dạng CSV. Đọc file CSV về dạng list[dict] với header làm key. Ghi list[dict] ra file CSV, tự động lấy fieldnames từ dict đầu tiên. """
 
     def __init__(
         self,
@@ -32,12 +18,7 @@ class CsvHandler(BaseFileHandler):
         delimiter: str = ",",
         encoding: str = "utf-8-sig",
     ):
-        """
-        Args:
-            file_path (str): Đường dẫn tới file .csv.
-            delimiter (str): Ký tự phân tách cột (mặc định ',').
-            encoding (str): Encoding (mặc định 'utf-8-sig' để tương thích Excel).
-        """
+        """ Args: file_path (str): Đường dẫn tới file .csv. delimiter (str): Ký tự phân tách cột (mặc định ','). encoding (str): Encoding (mặc định 'utf-8-sig' để tương thích Excel). """
         super().__init__(file_path)
         self.__delimiter = delimiter
         self.__encoding = encoding
@@ -47,18 +28,7 @@ class CsvHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def read(self) -> list[dict]:
-        """
-        Đọc file CSV và trả về danh sách dictionary.
-
-        Returns:
-            list[dict]: Mỗi phần tử là một hàng, key là tên cột.
-                        Trả về list rỗng nếu file rỗng.
-
-        Raises:
-            FileNotFoundError: Nếu file không tồn tại.
-            ValueError: Nếu file CSV có cấu trúc không hợp lệ.
-            IOError: Nếu có lỗi hệ thống.
-        """
+        """ Đọc file CSV và trả về danh sách dictionary. Returns: list[dict]: Mỗi phần tử là một hàng, key là tên cột. Trả về list rỗng nếu file rỗng. Raises: FileNotFoundError: Nếu file không tồn tại. ValueError: Nếu file CSV có cấu trúc không hợp lệ. IOError: Nếu có lỗi hệ thống. """
         if not self.exists():
             logger.warning("File không tồn tại: %s", self._file_path)
             raise FileNotFoundError(f"Không tìm thấy file: {self._file_path}")
@@ -85,20 +55,7 @@ class CsvHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def write(self, data: list[dict]) -> bool:
-        """
-        Ghi danh sách dictionary ra file CSV.
-
-        Args:
-            data (list[dict]): Dữ liệu cần ghi. Mỗi dict là một hàng.
-                               Các key của dict[0] sẽ làm header.
-
-        Returns:
-            bool: True nếu ghi thành công.
-
-        Raises:
-            TypeError: Nếu data không phải list[dict].
-            IOError: Nếu có lỗi hệ thống khi ghi.
-        """
+        """ Ghi danh sách dictionary ra file CSV. Args: data (list[dict]): Dữ liệu cần ghi. Mỗi dict là một hàng. Các key của dict[0] sẽ làm header. Returns: bool: True nếu ghi thành công. Raises: TypeError: Nếu data không phải list[dict]. IOError: Nếu có lỗi hệ thống khi ghi. """
         if not isinstance(data, list):
             raise TypeError(f"Dữ liệu phải là list[dict], nhận: {type(data).__name__}")
 
@@ -137,15 +94,7 @@ class CsvHandler(BaseFileHandler):
     # ------------------------------------------------------------------ #
 
     def append_row(self, record: dict) -> bool:
-        """
-        Thêm một hàng vào cuối file CSV mà không cần load toàn bộ.
-
-        Args:
-            record (dict): Bản ghi cần thêm.
-
-        Returns:
-            bool: True nếu thành công.
-        """
+        """ Thêm một hàng vào cuối file CSV mà không cần load toàn bộ. Args: record (dict): Bản ghi cần thêm. Returns: bool: True nếu thành công. """
         self.ensure_directory()
         file_exists = self.exists() and self.get_file_size() > 0
 
