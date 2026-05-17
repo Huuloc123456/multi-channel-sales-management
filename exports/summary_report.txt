@@ -1,0 +1,13 @@
+============================================================
+     BAO CAO DOANH THU & HOAT DONG KINH DOANH - 2026-05-17
+============================================================
+Tong so luong san pham: 5
+Tong so luong khach hang: 4
+Tong so luong don hang: 3
+Tong doanh thu du kien (tru don huy): 13,550,000 VND
+------------------------------------------------------------
+DANH SACH DON HANG CHI TIET:
+ - [ORD-30001] KH: CUS-2001 | Tong:    9,260,000 VND | Trang thai: completed
+ - [ORD-30002] KH: CUS-2003 | Tong:    4,290,000 VND | Trang thai: pending
+ - [ORD-30003] KH: CUS-2002 | Tong:      375,000 VND | Trang thai: cancelled
+============================================================

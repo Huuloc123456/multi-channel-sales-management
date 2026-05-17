@@ -1,0 +1,59 @@
+[
+    {
+        "order_id": "ORD-30001",
+        "customer_id": "CUS-2001",
+        "items": [
+            {
+                "product_id": "PRD-1001",
+                "product_name": "Tai nghe không dây Sony WH-1000XM5",
+                "price": 8490000.0,
+                "quantity": 1
+            },
+            {
+                "product_id": "PRD-1004",
+                "product_name": "Bình giữ nhiệt Lock&Lock 800ml",
+                "price": 385000.0,
+                "quantity": 2
+            }
+        ],
+        "channel": "shopee",
+        "payment_method": "momo",
+        "total_amount": 9260000.0,
+        "status": "completed",
+        "created_at": "2026-05-15 14:30:00"
+    },
+    {
+        "order_id": "ORD-30002",
+        "customer_id": "CUS-2003",
+        "items": [
+            {
+                "product_id": "PRD-1002",
+                "product_name": "Bàn phím cơ Keychron Q1 Pro",
+                "price": 4290000.0,
+                "quantity": 1
+            }
+        ],
+        "channel": "offline",
+        "payment_method": "card",
+        "total_amount": 4290000.0,
+        "status": "pending",
+        "created_at": "2026-05-16 09:15:22"
+    },
+    {
+        "order_id": "ORD-30003",
+        "customer_id": "CUS-2002",
+        "items": [
+            {
+                "product_id": "PRD-1003",
+                "product_name": "Sách Giáo trình Lập trình Hướng đối tượng",
+                "price": 125000.0,
+                "quantity": 3
+            }
+        ],
+        "channel": "tiktok",
+        "payment_method": "vnpay",
+        "total_amount": 375000.0,
+        "status": "cancelled",
+        "created_at": "2026-05-17 08:00:10"
+    }
+]

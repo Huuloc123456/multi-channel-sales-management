@@ -1,0 +1,6 @@
+product_id,name,price,quantity,category,channel
+PRD-1001,Tai nghe không dây Sony WH-1000XM5,8490000.0,45,Điện tử,both
+PRD-1002,Bàn phím cơ Keychron Q1 Pro,4290000.0,28,Điện tử,online
+PRD-1003,Sách Giáo trình Lập trình Hướng đối tượng,125000.0,150,Sách,both
+PRD-1004,Bình giữ nhiệt Lock&Lock 800ml,385000.0,60,Gia dụng,offline
+PRD-1005,Áo khoác gió thể thao Adidas,1850000.0,35,Thời trang,online
