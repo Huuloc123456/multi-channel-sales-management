@@ -1,0 +1,42 @@
+[
+    {
+        "product_id": "PRD-1001",
+        "name": "Tai nghe không dây Sony WH-1000XM5",
+        "price": 8490000.0,
+        "quantity": 45,
+        "category": "Điện tử",
+        "channel": "both"
+    },
+    {
+        "product_id": "PRD-1002",
+        "name": "Bàn phím cơ Keychron Q1 Pro",
+        "price": 4290000.0,
+        "quantity": 28,
+        "category": "Điện tử",
+        "channel": "online"
+    },
+    {
+        "product_id": "PRD-1003",
+        "name": "Sách Giáo trình Lập trình Hướng đối tượng",
+        "price": 125000.0,
+        "quantity": 150,
+        "category": "Sách",
+        "channel": "both"
+    },
+    {
+        "product_id": "PRD-1004",
+        "name": "Bình giữ nhiệt Lock&Lock 800ml",
+        "price": 385000.0,
+        "quantity": 60,
+        "category": "Gia dụng",
+        "channel": "offline"
+    },
+    {
+        "product_id": "PRD-1005",
+        "name": "Áo khoác gió thể thao Adidas",
+        "price": 1850000.0,
+        "quantity": 35,
+        "category": "Thời trang",
+        "channel": "online"
+    }
+]

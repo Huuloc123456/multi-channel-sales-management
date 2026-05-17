@@ -1,0 +1,34 @@
+[
+    {
+        "customer_id": "CUS-2001",
+        "full_name": "Nguyễn Văn Hùng",
+        "email": "vanhung.nguyen@gmail.com",
+        "phone": "0912345678",
+        "address": "123 Đường Lê Lợi, Quận 1, TP. HCM",
+        "loyalty_points": 120
+    },
+    {
+        "customer_id": "CUS-2002",
+        "full_name": "Trần Thị Hương",
+        "email": "huongtran.95@yahoo.com",
+        "phone": "0987654321",
+        "address": "456 Đường Nguyễn Trãi, Thanh Xuân, Hà Nội",
+        "loyalty_points": 85
+    },
+    {
+        "customer_id": "CUS-2003",
+        "full_name": "Lê Hoàng Nam",
+        "email": "namlh.huit@gmail.com",
+        "phone": "0905558888",
+        "address": "789 Đường Điện Biên Phủ, Thanh Khê, Đà Nẵng",
+        "loyalty_points": 250
+    },
+    {
+        "customer_id": "CUS-2004",
+        "full_name": "Phạm Minh Thư",
+        "email": "minhthu_pham@outlook.com",
+        "phone": "0933444555",
+        "address": "12 Đại lộ Hòa Bình, Ninh Kiều, Cần Thơ",
+        "loyalty_points": 45
+    }
+]

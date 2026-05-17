@@ -1,0 +1,5 @@
+customer_id,full_name,email,phone,address,loyalty_points
+CUS-2001,Nguyễn Văn Hùng,vanhung.nguyen@gmail.com,0912345678,"123 Đường Lê Lợi, Quận 1, TP. HCM",120
+CUS-2002,Trần Thị Hương,huongtran.95@yahoo.com,0987654321,"456 Đường Nguyễn Trãi, Thanh Xuân, Hà Nội",85
+CUS-2003,Lê Hoàng Nam,namlh.huit@gmail.com,0905558888,"789 Đường Điện Biên Phủ, Thanh Khê, Đà Nẵng",250
+CUS-2004,Phạm Minh Thư,minhthu_pham@outlook.com,0933444555,"12 Đại lộ Hòa Bình, Ninh Kiều, Cần Thơ",45
