@@ -1,16 +1,9 @@
-"""
-converters.py
-
-Các hàm chuyển đổi định dạng tệp linh hoạt giữa JSON, CSV, và TXT.
-"""
-
 from typing import List
 from .json_handler import JSONFileHandler
 from .csv_handler import CSVFileHandler
 from .txt_handler import TXTFileHandler
 
 def chuyen_doi_json_sang_csv(json_path: str, csv_path: str, fieldnames: List[str] = None) -> bool:
-    """Chuyển đổi dữ liệu từ tệp JSON sang CSV."""
     try:
         json_handler = JSONFileHandler(json_path)
         data = json_handler.doc()
@@ -24,7 +17,6 @@ def chuyen_doi_json_sang_csv(json_path: str, csv_path: str, fieldnames: List[str
         raise Exception(f"Lỗi chuyển đổi JSON ↔ CSV: {e}")
 
 def chuyen_doi_csv_sang_json(csv_path: str, json_path: str) -> bool:
-    """Chuyển đổi dữ liệu từ tệp CSV sang JSON."""
     try:
         csv_handler = CSVFileHandler(csv_path)
         data = csv_handler.doc()
@@ -35,7 +27,6 @@ def chuyen_doi_csv_sang_json(csv_path: str, json_path: str) -> bool:
         raise Exception(f"Lỗi chuyển đổi CSV ↔ JSON: {e}")
 
 def chuyen_doi_json_sang_txt(json_path: str, txt_path: str) -> bool:
-    """Chuyển đổi dữ liệu từ JSON sang cấu trúc bảng ASCII/Văn bản trong tệp TXT."""
     try:
         json_handler = JSONFileHandler(json_path)
         data = json_handler.doc()
