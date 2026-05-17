@@ -1,17 +1,3 @@
-"""
-main.py
-
-Điểm khởi chạy chính (entry point) của dự án mô-đun hóa omnichannel-sales-management-2.
-Buổi thực hành 9: Random & Sys và giao diện Console tương tác.
-
-Các tính năng nổi bật:
-- Triển khai đầy đủ menu 10 chức năng.
-- Sử dụng sys.argv để điều hướng tham số dòng lệnh (--demo).
-- Sử dụng sys.version_info, sys.platform để báo cáo chi tiết thông tin hệ thống.
-- Sử dụng random.randint(), random.choice(), random.shuffle(), random.uniform(), random.sample() trong chức năng sinh dữ liệu ngẫu nhiên.
-- Tích hợp CRUD hướng đối tượng cho Sản phẩm, Khách hàng và Đơn hàng.
-"""
-
 import sys
 import random
 import os
@@ -19,16 +5,13 @@ import json
 import datetime
 from typing import List
 
-# Đồng bộ đường dẫn gốc vào hệ thống sys.path để tránh lỗi ModuleNotFoundError khi chạy từ thư mục khác
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-# Đồng bộ bảng mã UTF-8 cho dòng lệnh (tránh lỗi font trên Windows console)
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-# Import các file nội bộ theo cấu trúc mô-đun
 from file_handlers import (
     JSONFileHandler, CSVFileHandler, TXTFileHandler,
     chuyen_doi_json_sang_csv, chuyen_doi_csv_sang_json, chuyen_doi_json_sang_txt
@@ -37,27 +20,16 @@ from models import Product, Customer, Order
 from repositories import ProductRepository, CustomerRepository, OrderRepository
 from utils import get_absolute_path
 
-
-# =====================================================================
-# [BUỔI 9 - KIỂM TRA PHIÊN BẢN PYTHON KHI KHỞI CHẠY]
-# =====================================================================
 def kiem_tra_he_thong():
-    """Kiểm tra phiên bản hệ điều hành và Python trước khi khởi động."""
     print("=" * 60)
     print("[SYS] KIEM TRA HE THONG KHOI DONG (sys module):")
-    # Sử dụng sys.version_info
     v = sys.version_info
     print(f" -> Phien ban Python: {v.major}.{v.minor}.{v.micro} ({v.releaselevel})")
-    # Sử dụng sys.platform
     print(f" -> He dieu hanh (Platform): {sys.platform}")
-    # Sử dụng sys.path[0]
     print(f" -> Thu muc goc thuc thi: {sys.path[0]}")
     print("=" * 60)
     print()
 
-
-# --- KHỞI TẠO CÁC REPOSITORIES ---
-# Đảm bảo thư mục dữ liệu và xuất báo cáo tồn tại
 os.makedirs(get_absolute_path("data"), exist_ok=True)
 os.makedirs(get_absolute_path("exports"), exist_ok=True)
 
@@ -65,12 +37,6 @@ prod_repo = ProductRepository()
 cust_repo = CustomerRepository()
 order_repo = OrderRepository()
 
-
-# =====================================================================
-# [BUỔI 8 & 9 - CÁC HÀM CRUD CONSOLE]
-# =====================================================================
-
-# --- 1. QUẢN LÝ SẢN PHẨM ---
 def menu_quan_ly_san_pham():
     while True:
         print("\n--- [CRUD SAN PHAM] ---")
@@ -95,15 +61,12 @@ def menu_quan_ly_san_pham():
             print("[WARN] Lua chon khong hop le, vui long chon lai!")
 
 def xem_danh_sach_san_pham(shuffled: bool = False):
-    """(R) - Đọc dữ liệu JSON và in bảng sản phẩm ra console."""
     products = prod_repo.get_all()
     if not products:
         print("[EMPTY] Danh sach san pham trong!")
         return
 
-    # Buổi 9: Xáo trộn ngẫu nhiên danh sách sản phẩm bằng random.shuffle() nếu có yêu cầu
     if shuffled:
-        # Tạo bản sao danh sách để không ảnh hưởng dữ liệu gốc
         products = list(products)
         random.shuffle(products)
         print("[RANDOM] Da xao tron thu tu hien thi bang random.shuffle()!")
@@ -114,11 +77,8 @@ def xem_danh_sach_san_pham(shuffled: bool = False):
         print(f"{p.product_id:12} | {p.name:30} | {p.price:15,.0f} | {p.quantity:8} | {p.category:15} | {p.channel:10}")
 
 def them_san_pham_moi():
-    """(C) - Nhập từ bàn phím → validate → lưu JSON."""
     print("\n--- THEM SAN PHAM MOI ---")
     try:
-        # [BUỔI 9 - RANDOM ID SẢN PHẨM]
-        # Sử dụng random.randint() để sinh mã ID ngẫu nhiên đảm bảo tính toàn vẹn
         new_id = f"PRD-{random.randint(1000, 9999)}"
         print(f"-> Ma san pham tu dong sinh: {new_id}")
         
@@ -136,7 +96,6 @@ def them_san_pham_moi():
 
         category = input("Nhap danh muc (mac dinh: Chua phan loai): ").strip() or "Chua phan loai"
         
-        # [BUỔI 9 - RANDOM.CHOICE GỢI Ý KÊNH BÁN]
         suggested_channel = random.choice(["online", "offline", "both"])
         channel = input(f"Nhap kenh ban (online/offline/both - Goi y '{suggested_channel}'): ").strip().lower() or suggested_channel
         if channel not in ["online", "offline", "both"]:
@@ -153,7 +112,6 @@ def them_san_pham_moi():
         print(f"[FAIL] Da xay ra loi he thong: {e}")
 
 def sua_san_pham():
-    """(U) - Chọn ID → nhập thông tin mới → ghi đè JSON."""
     print("\n--- SUA THONG TIN SAN PHAM ---")
     xem_danh_sach_san_pham()
     prod_id = input("\n-> Nhap ma san pham can sua: ").strip().upper()
@@ -189,7 +147,6 @@ def sua_san_pham():
         print(f"[FAIL] Da xay ra loi: {e}")
 
 def xoa_san_pham():
-    """(D) - Chọn ID → xác nhận → xóa khỏi JSON."""
     print("\n--- XOA SAN PHAM ---")
     xem_danh_sach_san_pham()
     prod_id = input("\n-> Nhap ma san pham can xoa: ").strip().upper()
@@ -208,8 +165,6 @@ def xoa_san_pham():
     else:
         print("[INFO] Da huy thao tac xoa.")
 
-
-# --- 2. QUẢN LÝ KHÁCH HÀNG ---
 def menu_quan_ly_khach_hang():
     while True:
         print("\n--- [CRUD KHACH HANG] ---")
@@ -234,7 +189,6 @@ def menu_quan_ly_khach_hang():
             print("[WARN] Lua chon khong hop le, vui long chon lai!")
 
 def xem_danh_sach_khach_hang():
-    """(R) - Xem danh sách khách hàng từ JSON."""
     customers = cust_repo.get_all()
     if not customers:
         print("[EMPTY] Danh sach khach hang trong!")
@@ -246,10 +200,8 @@ def xem_danh_sach_khach_hang():
         print(f"{c.customer_id:12} | {c.full_name:25} | {c.email:30} | {c.phone:12} | {c.address:30} | {c.loyalty_points}")
 
 def them_khach_hang_moi():
-    """(C) - Thêm khách hàng mới."""
     print("\n--- THEM KHACH HANG MOI ---")
     try:
-        # [BUỔI 9 - RANDOM ID KHÁCH HÀNG]
         new_id = f"CUS-{random.randint(1000, 9999)}"
         print(f"-> Ma khach hang tu dong sinh: {new_id}")
 
@@ -279,7 +231,6 @@ def them_khach_hang_moi():
         print(f"[FAIL] Da xay ra loi: {e}")
 
 def sua_khach_hang():
-    """(U) - Sửa khách hàng."""
     print("\n--- SUA THONG TIN KHACH HANG ---")
     xem_danh_sach_khach_hang()
     cust_id = input("\n-> Nhap ma khach hang can sua: ").strip().upper()
@@ -311,7 +262,6 @@ def sua_khach_hang():
         print(f"[FAIL] Da xay ra loi: {e}")
 
 def xoa_khach_hang():
-    """(D) - Xóa khách hàng."""
     print("\n--- XOA KHACH HANG ---")
     xem_danh_sach_khach_hang()
     cust_id = input("\n-> Nhap ma khach hang can xoa: ").strip().upper()
@@ -330,8 +280,6 @@ def xoa_khach_hang():
     else:
         print("[INFO] Da huy thao tac xoa.")
 
-
-# --- 3. QUẢN LÝ ĐƠN HÀNG ---
 def menu_quan_ly_don_hang():
     while True:
         print("\n--- [CRUD DON HANG] ---")
@@ -356,7 +304,6 @@ def menu_quan_ly_don_hang():
             print("[WARN] Lua chon khong hop le, vui long chon lai!")
 
 def xem_danh_sach_don_hang():
-    """(R) - Xem đơn hàng từ JSON."""
     orders = order_repo.get_all()
     if not orders:
         print("[EMPTY] Danh sach don hang trong!")
@@ -368,10 +315,8 @@ def xem_danh_sach_don_hang():
         print(f"{o.order_id:12} | {o.customer_id:15} | {o.channel:10} | {o.payment_method:10} | {o.total_amount:15,.0f} | {o.status:10} | {o.created_at}")
 
 def tao_don_hang_moi():
-    """(C) - Tạo đơn hàng mới."""
     print("\n--- TAO DON HANG MOI ---")
     try:
-        # [BUỔI 9 - RANDOM ID ĐƠN HÀNG]
         new_id = f"ORD-{random.randint(10000, 99999)}"
         print(f"-> Ma don hang tu dong sinh: {new_id}")
 
@@ -407,7 +352,6 @@ def tao_don_hang_moi():
                 print(f"[FAIL] Khong du hang! Chi co the mua toi da {product.quantity} san pham.")
                 continue
 
-            # Giảm tồn kho tạm thời trong RAM của sản phẩm
             product.quantity -= qty
             
             subtotal = product.price * qty
@@ -424,7 +368,6 @@ def tao_don_hang_moi():
         if not items:
             raise ValueError("Đơn hàng phải có ít nhất 1 sản phẩm!")
 
-        # [BUỔI 9 - RANDOM.CHOICE GỢI Ý KÊNH BÁN & THANH TOÁN]
         suggested_channel = random.choice(["shopee", "lazada", "tiktok", "facebook", "offline"])
         channel = input(f"Nhap kenh ban (shopee/lazada/tiktok/facebook/offline - Goi y '{suggested_channel}'): ").strip().lower() or suggested_channel
         if channel not in ["shopee", "lazada", "tiktok", "facebook", "offline"]:
@@ -445,9 +388,8 @@ def tao_don_hang_moi():
             status="pending"
         )
         
-        # Lưu đơn hàng và cập nhật lại tồn kho của sản phẩm trong JSON
         order_repo.create(new_order)
-        prod_repo._luu_du_lieu()  # Đồng bộ tồn kho mới
+        prod_repo._luu_du_lieu()
         print(f"[OK] Tao don hang thanh cong! Tong gia tri don hang: {total_amount:,.0f} VND.")
         
     except ValueError as e:
@@ -456,7 +398,6 @@ def tao_don_hang_moi():
         print(f"[FAIL] Da xay ra loi: {e}")
 
 def cap_nhat_trang_thai_don_hang():
-    """(U) - Sửa trạng thái đơn hàng."""
     print("\n--- CAP NHAT TRANG THAI DON HANG ---")
     xem_danh_sach_don_hang()
     order_id = input("\n-> Nhap ma don hang can cap nhat: ").strip().upper()
@@ -478,7 +419,6 @@ def cap_nhat_trang_thai_don_hang():
         print(f"[FAIL] Loi: {e}")
 
 def xoa_don_hang():
-    """(D) - Xóa đơn hàng."""
     print("\n--- HUY/XOA DON HANG ---")
     xem_danh_sach_don_hang()
     order_id = input("\n-> Nhap ma don hang can xoa: ").strip().upper()
@@ -497,14 +437,7 @@ def xoa_don_hang():
     else:
         print("[INFO] Da huy thao tac xoa.")
 
-
-# =====================================================================
-# [BUỔI 8 - CÁC TÍNH NĂNG VỀ FILE & XỬ LÝ LỖI CHUYÊN SÂU]
-# =====================================================================
-
-# --- 4. XUẤT DỮ LIỆU RA CSV ---
 def xuat_du_lieu_ra_csv():
-    """Đọc dữ liệu từ JSON repository và xuất ra CSV bằng CSVFileHandler."""
     print("\n--- [Buoi 8] XUAT DU LIEU RA FILE CSV ---")
     print("1. Xuat danh sach San pham ra CSV")
     print("2. Xuat danh sach Khach hang ra CSV")
@@ -534,10 +467,7 @@ def xuat_du_lieu_ra_csv():
     except Exception as e:
         print(f"[FAIL] Loi xuat file CSV: {e}")
 
-
-# --- 5. XUẤT DỮ LIỆU RA TXT ---
 def xuat_du_lieu_ra_txt():
-    """Đọc dữ liệu và xuất ra định dạng văn bản báo cáo TXT đẹp mắt."""
     print("\n--- [Buoi 8] XUAT BAO CAO RA FILE TXT ---")
     try:
         products = prod_repo.get_all()
@@ -563,21 +493,17 @@ def xuat_du_lieu_ra_txt():
         report_lines.append("============================================================")
         
         handler = TXTFileHandler(get_absolute_path("exports", "summary_report.txt"))
-        # Sử dụng ghi_nhiều_dòng (writelines)
         handler.ghi_nhiều_dòng(report_lines)
         print("[OK] Da xuat bao cao kinh doanh thanh cong tai 'exports/summary_report.txt'!")
         
-        # Đọc ngược lại file TXT vừa ghi bằng doc_từng_dòng() để demo cho giáo viên chấm điểm
         print("\n[INFO] DOC THU LAI FILE TXT VUA GHI BANG PHUONG THUC READLINE()/READLINES():")
         lines = handler.doc_từng_dòng()
-        for i, line in enumerate(lines[:5], 1): # Chỉ hiển thị 5 dòng đầu
+        for i, line in enumerate(lines[:5], 1):
             print(f"Dong {i}: {line}")
             
     except Exception as e:
         print(f"[FAIL] Loi xuat/doc file TXT: {e}")
 
-
-# --- 6. CHUYỂN ĐỔI ĐỊNH DẠNG FILE ---
 def menu_chuyen_doi_dinh_dang():
     print("\n--- [Buoi 8] CHUYEN DOI DINH DANG FILE (JSON <-> CSV <-> TXT) ---")
     print("1. Chuyen doi Khach hang tu JSON sang CSV")
@@ -599,7 +525,6 @@ def menu_chuyen_doi_dinh_dang():
             )
             print("[OK] Da chuyen doi thanh cong tai 'data/products_report.txt'!")
         elif choice == "3":
-            # Đảm bảo có file CSV gốc để chuyển đổi
             if not os.path.exists(get_absolute_path("data", "customers_converted.csv")):
                 print("[WARN] Ban can chon chuc nang 1 truoc de co tep CSV mau!")
                 return
@@ -613,17 +538,10 @@ def menu_chuyen_doi_dinh_dang():
     except Exception as e:
         print(f"[FAIL] Loi chuyen doi file: {e}")
 
-
-# --- 7. DEMO XỬ LÝ LỖI FILE CHUYÊN SÂU ---
 def demo_xu_ly_loi_file():
-    """
-    Demo cố tình kích hoạt các lỗi về file và định dạng để kiểm thử khối try/except/else/finally.
-    Đáp ứng yêu cầu của BUỔI 8.
-    """
     print("\n--- [Buoi 8] DEMO CAC LOAI LOI FILE & XU LY NGOAI LE ---")
     print("He thong se co tinh kich hoat 3 loi pho bien sau:")
     
-    # 1. Lỗi FileNotFoundException
     print("\n-> 1. Triggers FileNotFoundError (Doc file khong ton tai):")
     try:
         h = JSONFileHandler(get_absolute_path("data", "file_nay_chac_chan_khong_ton_tai.json"))
@@ -637,11 +555,9 @@ def demo_xu_ly_loi_file():
     finally:
         print("   [FINALLY] Luon duoc thuc thi ke ca khi co loi xay ra.")
 
-    # 2. Lỗi JSONDecodeError
     print("\n-> 2. Triggers JSONDecodeError (Doc file chua JSON sai cu phap):")
     malformed_filepath = get_absolute_path("data", "malformed.json")
     try:
-        # Cố ý ghi tệp JSON sai cú pháp
         with open(malformed_filepath, 'w', encoding='utf-8') as f:
             f.write("{ 'this_is_invalid_json': true, lacking_double_quotes }")
             
@@ -656,12 +572,10 @@ def demo_xu_ly_loi_file():
             os.remove(malformed_filepath)
         print("   [FINALLY] Da xoa file rac thu nghiem.")
 
-    # 3. Lỗi ValueError / Type Errors
     print("\n-> 3. Triggers ValueError/TypeError (Ghi kieu du lieu khong phu hop):")
     try:
         h = JSONFileHandler(get_absolute_path("data", "invalid_type.json"))
-        # Ghi một object không thể serialize (ví dụ: đối tượng set hoặc class chưa định nghĩa)
-        unserializable_data = {1, 2, 3}  # Kiểu set không thể lưu sang JSON
+        unserializable_data = {1, 2, 3}
         h.ghi(unserializable_data)
     except ValueError as e:
         print(f"   [CATCHED - ValueError] Loi gia tri/kieu du lieu: {e}")
@@ -670,20 +584,7 @@ def demo_xu_ly_loi_file():
     except Exception as e:
         print(f"   [CATCHED - Exception]: {e}")
 
-
-# =====================================================================
-# [BUỔI 9 - DEMO SỬ DỤNG THƯ VIỆN RANDOM]
-# =====================================================================
 def demo_random_library():
-    """
-    Tạo dữ liệu ngẫu nhiên sử dụng đầy đủ các hàm của module random:
-    - random.randint()
-    - random.uniform()
-    - random.random()
-    - random.choice()
-    - random.shuffle()
-    - random.sample()
-    """
     print("\n--- [Buoi 9] THUC HANH MODULE RANDOM ---")
     print("Dang chuan bi sinh ngau nhien 5 san pham mo phong:")
     
@@ -693,18 +594,13 @@ def demo_random_library():
     
     random_products = []
     
-    # 1. Demo random.randint() và random.uniform() và random.random()
     for i in range(1, 6):
-        # random.randint() để tạo mã số và số lượng tồn kho ngẫu nhiên
         rand_id = f"PRD-{random.randint(100000, 999999)}"
         rand_qty = random.randint(5, 50)
         
-        # random.uniform() để tạo giá ngẫu nhiên có dấu phẩy động
-        # Kết hợp random.random() để sinh tỷ lệ chiết khấu ngẫu nhiên từ 0.0 đến 1.0
-        rand_discount = random.random() * 0.2  # Tối đa 20%
+        rand_discount = random.random() * 0.2
         rand_price = random.uniform(50000.0, 2000000.0) * (1 - rand_discount)
         
-        # random.choice() để chọn ngẫu nhiên danh mục và kênh bán
         rand_cat = random.choice(cats)
         rand_name = f"{random.choice(names)} Random #{i}"
         rand_channel = random.choice(channels)
@@ -723,23 +619,18 @@ def demo_random_library():
     for p in random_products:
         print(f" -> [{p.product_id}] {p.name} - Gia: {p.price:,.2f} VND | So luong: {p.quantity} | Kenh: {p.channel}")
 
-    # 2. Demo random.shuffle()
     print("\n[SHUFFLE] 2. Demo random.shuffle() (Xao tron danh sach hien thi):")
-    # Tạo danh sách ID
     ids = [p.product_id for p in random_products]
     print(f"   - Truoc xao tron: {ids}")
     random.shuffle(ids)
     print(f"   - Sau xao tron : {ids}")
 
-    # 3. Demo random.sample()
     print("\n[SAMPLE] 3. Demo random.sample() (Lay mau ngau nhien khong trung lap):")
-    # Lấy ngẫu nhiên 2 sản phẩm từ danh sách 5 sản phẩm vừa sinh
     sampled_prods = random.sample(random_products, 2)
     print("   - 2 san pham duoc lay mau ngau nhien:")
     for p in sampled_prods:
         print(f"     + [{p.product_id}] {p.name}")
 
-    # Hỏi người dùng có muốn lưu vào cơ sở dữ liệu JSON chính không
     save_choice = input("\n[SAVE] Ban co muon luu 5 san pham ngau nhien nay vao database chinh? (y/n): ").strip().lower()
     if save_choice == 'y':
         try:
@@ -751,35 +642,18 @@ def demo_random_library():
     else:
         print("[INFO] Da bo qua, khong luu du lieu ngau nhien.")
 
-
-# =====================================================================
-# [BUỔI 9 - XEM THÔNG TIN HỆ THỐNG QUA SYS]
-# =====================================================================
 def hien_thi_thong_tin_sys():
-    """
-    Xem thông tin hệ thống thông qua module sys:
-    - sys.version_info
-    - sys.platform
-    - sys.argv
-    - sys.path[0]
-    Và đo kích thước file dữ liệu thực tế bằng os.path.getsize().
-    """
     print("\n--- [Buoi 9] THONG TIN HE THONG (sys module & File Size) ---")
     
-    # 1. sys.version_info
     v = sys.version_info
     print(f"1. Phien ban Python (sys.version_info): {v.major}.{v.minor}.{v.micro} (Release: {v.releaselevel})")
     
-    # 2. sys.platform
     print(f"2. Nen tang he thong (sys.platform): {sys.platform}")
     
-    # 3. sys.argv
     print(f"3. Tham so dong lenh nhan vao (sys.argv): {sys.argv}")
     
-    # 4. sys.path[0]
     print(f"4. Thu muc chay ung dung chinh (sys.path[0]): {sys.path[0]}")
     
-    # 5. Đo kích thước các file database
     print("\n[STAT] KICH THUOC FILE DU LIEU HIEN TAI (bytes):")
     files = {
         "San pham (JSON)": get_absolute_path("data", "products.json"),
@@ -794,17 +668,11 @@ def hien_thi_thong_tin_sys():
         else:
             print(f"   - Tep {label:25}: Chua ton tai")
 
-
-# =====================================================================
-# [BUỔI 9 - DEMO CHẠY TỰ ĐỘNG BẰNG SYS.ARGV]
-# =====================================================================
 def run_auto_demo():
-    """Chạy tự động các tính năng nếu người dùng truyền tham số dòng lệnh --demo."""
     print("\n" + "="*80)
     print("[DEMO] CHE DO TU DONG CHAY THU NGHIEM (sys.argv: '--demo')")
     print("="*80)
     
-    # 1. Sinh ngẫu nhiên dữ liệu
     print("\n* BUOC 1: Sinh ngau nhien du lieu mau...")
     products_demo = [
         Product(f"PRD-{random.randint(1000, 9999)}", "San pham Demo A", 150000.0, 20, "Dien tu", "both"),
@@ -817,15 +685,12 @@ def run_auto_demo():
         except Exception:
             pass
             
-    # 2. In danh sách sản phẩm xáo trộn
     print("\n* BUOC 2: Hien thi danh sach san pham xao tron...")
     xem_danh_sach_san_pham(shuffled=True)
     
-    # 3. Xuất file báo cáo
     print("\n* BUOC 3: Xuat bao cao tom tat ra file TXT...")
     xuat_du_lieu_ra_txt()
     
-    # 4. Hiển thị thông số hệ thống
     print("\n* BUOC 4: Hien thi thong so he thong...")
     hien_thi_thong_tin_sys()
     
@@ -834,10 +699,6 @@ def run_auto_demo():
     print("="*80 + "\n")
     sys.exit(0)
 
-
-# =====================================================================
-# VÒNG LẶP MENU CONSOLE CHÍNH
-# =====================================================================
 def show_main_menu():
     print("+------------------------------------------+")
     print("|   HE THONG QUAN LY BAN HANG DA KENH V2   |")
@@ -858,11 +719,8 @@ def show_main_menu():
     print("+------------------------------------------+")
 
 def main():
-    # Kiểm tra kiểm chuẩn hệ thống ngay lúc khởi chạy
     kiem_tra_he_thong()
     
-    # [BUỔI 9 - XỬ LÝ THAM SỐ DÒNG LỆNH SYS.ARGV]
-    # Ví dụ: python main.py --demo
     if len(sys.argv) > 1 and sys.argv[1].lower() in ["--demo", "-d"]:
         run_auto_demo()
         
@@ -890,7 +748,6 @@ def main():
                 hien_thi_thong_tin_sys()
             elif choice == "0":
                 print("\n[exit] Cam on ban da su dung chuong trinh thuc hanh! Thoat he thong...")
-                # [BUỔI 9 - THOÁT CHƯƠNG TRÌNH SYS.EXIT]
                 sys.exit(0)
             else:
                 print("[WARN] Lua chon ngoai vung menu! Hay nhap tu 0 den 9.")

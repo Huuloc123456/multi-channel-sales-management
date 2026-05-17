@@ -38,5 +38,21 @@
         "quantity": 35,
         "category": "Thời trang",
         "channel": "online"
+    },
+    {
+        "product_id": "PRD-7225",
+        "name": "San pham Demo A",
+        "price": 150000.0,
+        "quantity": 20,
+        "category": "Dien tu",
+        "channel": "both"
+    },
+    {
+        "product_id": "PRD-3314",
+        "name": "Sach Giao Trinh OOP",
+        "price": 95000.0,
+        "quantity": 100,
+        "category": "Sach",
+        "channel": "online"
     }
 ]
