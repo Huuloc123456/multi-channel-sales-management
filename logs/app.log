@@ -65,3 +65,36 @@
 2026-05-15 11:06:36,998 | INFO     | __main__ | Các thư mục hệ thống đã sẵn sàng.
 2026-05-15 11:06:37,496 | INFO     | __main__ | Giao diện chính đã sẵn sàng.
 2026-05-15 11:06:41,878 | INFO     | __main__ | Ứng dụng đã đóng.
+2026-05-15 11:54:53,621 | INFO     | __main__ | ============================================================
+2026-05-15 11:54:53,622 | INFO     | __main__ | Khởi động Hệ thống Quản lý Bán hàng Đa kênh
+2026-05-15 11:54:53,622 | INFO     | __main__ | ============================================================
+2026-05-15 11:54:53,623 | INFO     | __main__ | Các thư mục hệ thống đã sẵn sàng.
+2026-05-15 11:54:54,701 | INFO     | __main__ | Giao diện chính đã sẵn sàng.
+2026-05-15 11:54:57,238 | INFO     | __main__ | Ứng dụng đã đóng.
+2026-05-15 12:01:01,644 | INFO     | __main__ | ============================================================
+2026-05-15 12:01:01,644 | INFO     | __main__ | Khởi động Hệ thống Quản lý Bán hàng Đa kênh
+2026-05-15 12:01:01,644 | INFO     | __main__ | ============================================================
+2026-05-15 12:01:01,646 | INFO     | __main__ | Các thư mục hệ thống đã sẵn sàng.
+2026-05-15 12:01:02,184 | INFO     | __main__ | Giao diện chính đã sẵn sàng.
+2026-05-15 12:01:11,556 | INFO     | ui.login_window | Đăng nhập thành công: admin (admin)
+2026-05-15 12:01:11,558 | INFO     | ui.main_window | Người dùng đăng nhập: admin (admin)
+2026-05-15 12:01:32,475 | INFO     | __main__ | Ứng dụng đã đóng.
+2026-05-15 12:03:18,106 | INFO     | __main__ | ============================================================
+2026-05-15 12:03:18,107 | INFO     | __main__ | Khởi động Hệ thống Quản lý Bán hàng Đa kênh
+2026-05-15 12:03:18,107 | INFO     | __main__ | ============================================================
+2026-05-15 12:03:18,108 | INFO     | __main__ | Các thư mục hệ thống đã sẵn sàng.
+2026-05-15 12:03:18,652 | INFO     | __main__ | Giao diện chính đã sẵn sàng.
+2026-05-15 12:03:22,494 | INFO     | ui.login_window | Đăng nhập thành công: admin (admin)
+2026-05-15 12:03:22,494 | INFO     | ui.main_window | Người dùng đăng nhập: admin (admin)
+2026-05-15 12:03:31,693 | INFO     | __main__ | Ứng dụng đã đóng.
+2026-05-15 12:04:43,067 | INFO     | __main__ | ============================================================
+2026-05-15 12:04:43,068 | INFO     | __main__ | Khởi động Hệ thống Quản lý Bán hàng Đa kênh
+2026-05-15 12:04:43,068 | INFO     | __main__ | ============================================================
+2026-05-15 12:04:43,069 | INFO     | __main__ | Các thư mục hệ thống đã sẵn sàng.
+2026-05-15 12:04:43,565 | INFO     | __main__ | Giao diện chính đã sẵn sàng.
+2026-05-15 12:04:46,576 | INFO     | ui.login_window | Đăng nhập thành công: admin (admin)
+2026-05-15 12:04:46,578 | INFO     | ui.main_window | Người dùng đăng nhập: admin (admin)
+2026-05-15 12:05:09,481 | INFO     | ui.main_window | Đăng xuất: admin
+2026-05-15 12:05:20,067 | INFO     | ui.login_window | Đăng nhập thành công: admin (admin)
+2026-05-15 12:05:20,068 | INFO     | ui.main_window | Người dùng đăng nhập: admin (admin)
+2026-05-15 12:05:30,202 | INFO     | __main__ | Ứng dụng đã đóng.
