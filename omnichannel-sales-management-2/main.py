@@ -1,7 +1,7 @@
 """
 main.py
 
-Điểm khởi chạy chính (entry point) của dự án omnichannel-sales-management-2.
+Điểm khởi chạy chính (entry point) của dự án mô-đun hóa omnichannel-sales-management-2.
 Buổi thực hành 9: Random & Sys và giao diện Console tương tác.
 
 Các tính năng nổi bật:
@@ -19,17 +19,23 @@ import json
 import datetime
 from typing import List
 
+# Đồng bộ đường dẫn gốc vào hệ thống sys.path để tránh lỗi ModuleNotFoundError khi chạy từ thư mục khác
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
+
 # Đồng bộ bảng mã UTF-8 cho dòng lệnh (tránh lỗi font trên Windows console)
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
 
-# Import các file nội bộ
+# Import các file nội bộ theo cấu trúc mô-đun
 from file_handlers import (
     JSONFileHandler, CSVFileHandler, TXTFileHandler,
     chuyen_doi_json_sang_csv, chuyen_doi_csv_sang_json, chuyen_doi_json_sang_txt
 )
 from models import Product, Customer, Order
 from repositories import ProductRepository, CustomerRepository, OrderRepository
+from utils import get_absolute_path
 
 
 # =====================================================================
@@ -51,8 +57,10 @@ def kiem_tra_he_thong():
 
 
 # --- KHỞI TẠO CÁC REPOSITORIES ---
-# Đảm bảo thư mục dữ liệu tồn tại
-os.makedirs("data", exist_ok=True)
+# Đảm bảo thư mục dữ liệu và xuất báo cáo tồn tại
+os.makedirs(get_absolute_path("data"), exist_ok=True)
+os.makedirs(get_absolute_path("exports"), exist_ok=True)
+
 prod_repo = ProductRepository()
 cust_repo = CustomerRepository()
 order_repo = OrderRepository()
@@ -509,7 +517,7 @@ def xuat_du_lieu_ra_csv():
                 print("[EMPTY] Khong co san pham nao de xuat!")
                 return
             data = [p.to_dict() for p in products]
-            handler = CSVFileHandler("exports/products_export.csv")
+            handler = CSVFileHandler(get_absolute_path("exports", "products_export.csv"))
             handler.ghi(data)
             print("[OK] Da xuat san pham thanh cong tai 'exports/products_export.csv'!")
         elif choice == "2":
@@ -518,7 +526,7 @@ def xuat_du_lieu_ra_csv():
                 print("[EMPTY] Khong co khach hang nao de xuat!")
                 return
             data = [c.to_dict() for c in customers]
-            handler = CSVFileHandler("exports/customers_export.csv")
+            handler = CSVFileHandler(get_absolute_path("exports", "customers_export.csv"))
             handler.ghi(data)
             print("[OK] Da xuat khach hang thanh cong tai 'exports/customers_export.csv'!")
         else:
@@ -554,7 +562,7 @@ def xuat_du_lieu_ra_txt():
             
         report_lines.append("============================================================")
         
-        handler = TXTFileHandler("exports/summary_report.txt")
+        handler = TXTFileHandler(get_absolute_path("exports", "summary_report.txt"))
         # Sử dụng ghi_nhiều_dòng (writelines)
         handler.ghi_nhiều_dòng(report_lines)
         print("[OK] Da xuat bao cao kinh doanh thanh cong tai 'exports/summary_report.txt'!")
@@ -579,17 +587,26 @@ def menu_chuyen_doi_dinh_dang():
     choice = input("-> Lua chon cua ban: ").strip()
     try:
         if choice == "1":
-            chuyen_doi_json_sang_csv("data/customers.json", "data/customers_converted.csv")
+            chuyen_doi_json_sang_csv(
+                get_absolute_path("data", "customers.json"), 
+                get_absolute_path("data", "customers_converted.csv")
+            )
             print("[OK] Da chuyen doi thanh cong tai 'data/customers_converted.csv'!")
         elif choice == "2":
-            chuyen_doi_json_sang_txt("data/products.json", "data/products_report.txt")
+            chuyen_doi_json_sang_txt(
+                get_absolute_path("data", "products.json"), 
+                get_absolute_path("data", "products_report.txt")
+            )
             print("[OK] Da chuyen doi thanh cong tai 'data/products_report.txt'!")
         elif choice == "3":
             # Đảm bảo có file CSV gốc để chuyển đổi
-            if not os.path.exists("data/customers_converted.csv"):
+            if not os.path.exists(get_absolute_path("data", "customers_converted.csv")):
                 print("[WARN] Ban can chon chuc nang 1 truoc de co tep CSV mau!")
                 return
-            chuyen_doi_csv_sang_json("data/customers_converted.csv", "data/customers_back.json")
+            chuyen_doi_csv_sang_json(
+                get_absolute_path("data", "customers_converted.csv"), 
+                get_absolute_path("data", "customers_back.json")
+            )
             print("[OK] Da chuyen doi thanh cong tai 'data/customers_back.json'!")
         else:
             print("[WARN] Lua chon khong hop le!")
@@ -609,7 +626,7 @@ def demo_xu_ly_loi_file():
     # 1. Lỗi FileNotFoundException
     print("\n-> 1. Triggers FileNotFoundError (Doc file khong ton tai):")
     try:
-        h = JSONFileHandler("data/file_nay_chac_chan_khong_ton_tai.json")
+        h = JSONFileHandler(get_absolute_path("data", "file_nay_chac_chan_khong_ton_tai.json"))
         h.doc()
     except FileNotFoundError as e:
         print(f"   [CATCHED - FileNotFoundError] Thanh cong bat loi: {e}")
@@ -622,7 +639,7 @@ def demo_xu_ly_loi_file():
 
     # 2. Lỗi JSONDecodeError
     print("\n-> 2. Triggers JSONDecodeError (Doc file chua JSON sai cu phap):")
-    malformed_filepath = "data/malformed.json"
+    malformed_filepath = get_absolute_path("data", "malformed.json")
     try:
         # Cố ý ghi tệp JSON sai cú pháp
         with open(malformed_filepath, 'w', encoding='utf-8') as f:
@@ -642,7 +659,7 @@ def demo_xu_ly_loi_file():
     # 3. Lỗi ValueError / Type Errors
     print("\n-> 3. Triggers ValueError/TypeError (Ghi kieu du lieu khong phu hop):")
     try:
-        h = JSONFileHandler("data/invalid_type.json")
+        h = JSONFileHandler(get_absolute_path("data", "invalid_type.json"))
         # Ghi một object không thể serialize (ví dụ: đối tượng set hoặc class chưa định nghĩa)
         unserializable_data = {1, 2, 3}  # Kiểu set không thể lưu sang JSON
         h.ghi(unserializable_data)
@@ -765,10 +782,10 @@ def hien_thi_thong_tin_sys():
     # 5. Đo kích thước các file database
     print("\n[STAT] KICH THUOC FILE DU LIEU HIEN TAI (bytes):")
     files = {
-        "San pham (JSON)": "data/products.json",
-        "Khach hang (JSON)": "data/customers.json",
-        "Don hang (JSON)": "data/orders.json",
-        "Bao cao tom tat (TXT)": "exports/summary_report.txt"
+        "San pham (JSON)": get_absolute_path("data", "products.json"),
+        "Khach hang (JSON)": get_absolute_path("data", "customers.json"),
+        "Don hang (JSON)": get_absolute_path("data", "orders.json"),
+        "Bao cao tom tat (TXT)": get_absolute_path("exports", "summary_report.txt")
     }
     for label, path in files.items():
         if os.path.exists(path):
@@ -882,7 +899,7 @@ def main():
             sys.exit(0)
         except Exception as e:
             print(f"[FAIL] Da xay ra loi khong xac dinh tai Menu chinh: {e}")
-            print("Vui la2ng thu lai thao tac.")
+            print("Vui long thu lai thao tac.")
 
 if __name__ == "__main__":
     main()
